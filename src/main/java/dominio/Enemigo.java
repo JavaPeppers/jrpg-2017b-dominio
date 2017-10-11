@@ -4,14 +4,11 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	
 
 	private int salud;
-	private int ataque;
+	//private int ataque;
 	
-	public Enemigo(int fuerza, int defensa, String nombre, int ataque, int salud) {
+	public Enemigo(int fuerza, int defensa, String nombre, int salud) {
 		super(fuerza, defensa, 1, nombre);
-		this.ataque = ataque;
-		this.salud = salud;
-		
-		
+		this.salud = salud;	
 	}
 
 	@Override
@@ -49,19 +46,8 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 		
 		if(!personaje.estaVivo())
 			return 0;
-		return personaje.serAtacado(this.ataque);
+		return personaje.serAtacado(this.getFuerza());
 			
-	}
-	
-
-	@Override
-	public int getAtaque() {
-		return this.ataque;
-	}
-
-	@Override
-	public void setAtaque(int ataque) {
-		this.ataque = ataque;
 	}
 
 	@Override
@@ -77,5 +63,15 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	@Override
 	public int otorgarExp() { 
 		return 0;
+	}
+
+	@Override
+	public int getAtaque() {
+		return this.getFuerza();
+	}
+
+	@Override
+	public void setAtaque(int ataque) {
+		this.aumentarFuerza(ataque);
 	}
 }
