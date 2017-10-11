@@ -4,7 +4,6 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	
 
 	private int salud;
-	//private int ataque;
 	
 	public Enemigo(int fuerza, int defensa, String nombre, int salud) {
 		super(fuerza, defensa, 1, nombre);
