@@ -3,6 +3,7 @@ package dominio;
 public class Enemigo extends MadreDeTodo implements Peleable {
 	
 
+	private static final int saludTope = 60;
 	private int salud;
 	
 	public Enemigo(int fuerza, int defensa, String nombre, int salud) {
@@ -72,5 +73,9 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	@Override
 	public void setAtaque(int ataque) {
 		this.aumentarFuerza(ataque);
+	}
+
+	public int getSaludTope() {
+		return saludTope;
 	}
 }
