@@ -2,7 +2,7 @@ package dominio;
 
 public class Enemigo extends MadreDeTodo implements Peleable {
 	
-
+	public static final int RANGO = 100;
 	private static final int saludTope = 60;
 	private int salud;
 	
