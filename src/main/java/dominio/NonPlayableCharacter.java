@@ -172,20 +172,6 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 		}
 		return 0;
 	}
-
-	/**
-	 * Método sin implementar.
-	 */
-	@Override
-	public void despuesDeTurno() { }
-	/**
-	 * Método sin implementar.
-	 * @param exp Experiencia a aumentar al npc.
-	 */
-	public void ganarExperiencia(final int exp) {
-
-	}
-
 	/**
 	 * Retorna un entero que representa el atributo de Fuerza del NPC.
 	 * @return retorna el ataque del NPC.

@@ -34,7 +34,7 @@ public interface Peleable {
 	 * Metodo void implementado en Personaje
 	 * y NonPlayableCharacter.
 	 */
-	void despuesDeTurno();
+	//void despuesDeTurno();
 	/**
 	 * Metodo implementado en Personaje
 	 * y NonPlayableCharacter.

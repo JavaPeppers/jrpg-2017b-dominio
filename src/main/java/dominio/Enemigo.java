@@ -1,24 +1,55 @@
 package dominio;
 
 public class Enemigo extends MadreDeTodo implements Peleable {
-	
+	/**
+	 * Rango en el cual el enemigo me va a atacar
+	 */
 	public static final int RANGO = 70;
+	
+	/**
+	 * Salud tope del enemigo
+	 */
 	private static final int saludTope = 60;
+	/**
+	 * Salud actual del enemigo
+	 */
 	private int salud;
 	
-	public Enemigo(int fuerza, int defensa, String nombre, int salud) {
-		super(fuerza, defensa, 1, nombre);
-		this.salud = salud;	
+	/**
+	 * Constructor de Enemigo
+	 * @param fuerza
+	 * @param defensa
+	 * @param nombre
+	 * @param salud
+	 */
+	public Enemigo(String nombre) {
+		super(25, 0, 1, nombre);
+		this.salud = saludTope;	
 	}
 
+	/**
+	 * Método implementado en la interfaz Peleable
+	 * Se le resta la salud al enemigo tomando
+	 * en cuenta el daño recibido menos la defensa del enemigo
+	 */
 	@Override
 	public int serAtacado(int daño) {
-		if(daño > 0) {
-			salud -= daño;
-			return daño;
+		daño-=this.getDefensa();
+		if (daño > 0) {
+			if (salud <= daño) {
+				daño = salud;
+				salud = 0;
+			} else {
+				salud -= daño;
+			}
 		}
 		return 0;
 	}
+	
+	/**
+	 * Método implementado en la interfaz Peleable
+	 * @return retorna la salud actual del enemigo
+	 */
 
 	@Override
 	public int getSalud() {
@@ -38,9 +69,13 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	/**
 	 * Metodo sin implementar
 	 */
-	@Override
-	public void despuesDeTurno() {	}
+//	@Override
+//	public void despuesDeTurno() {	}
 
+	/**
+	 * Método implementado en la interfaz Peleable
+	 * Verifica que el personaje este vivo y si lo esta lo ataca.
+	 */
 	@Override
 	public int atacar(final Peleable personaje) {
 		
@@ -49,32 +84,45 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 		return personaje.serAtacado(this.getFuerza());
 			
 	}
-
+	
+	/**
+	 * Método implementado en la interfaz Peleable
+	 * @return booleano si esta vivo el enemigo o no
+	 */
 	@Override
 	public boolean estaVivo() {
 		return salud > 0;
 	}
 
-	public final void setSalud(final int salud) {
-		this.salud = salud;
-	}
-
-
+	/**
+	 * Método implementado en la interfaz Peleable
+	 * @return la experiencia que otorga el enemigo.
+	 */
 	@Override
 	public int otorgarExp() { 
-		return 0;
+		return 40;
 	}
 
+	/**Método implementado en la interfaz Peleable
+	 * @return la fuerza del enemigo. Fuerza y ataque poseen el mismo valor
+	 */
 	@Override
 	public int getAtaque() {
 		return this.getFuerza();
 	}
 
+	/**
+	 * Método que aumenta la fuerza del enemigo
+	 */
 	@Override
 	public void setAtaque(int ataque) {
 		this.aumentarFuerza(ataque);
 	}
 
+	/**
+	 * Método que retorna la saludTope del Enemigo
+	 * @return
+	 */
 	public int getSaludTope() {
 		return saludTope;
 	}

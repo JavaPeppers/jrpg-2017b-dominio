@@ -28,8 +28,6 @@ public class Asesino extends Casta {
 	 * Probabilidad de evitar dano por defecto.
 	 */
 	private static final double PROBEVITARDANIO = 0.5;
-
-
 	/** La clase Asesino es una casta de Personaje.
 	 * hereda de la clase Casta
 	 * posee dos constructores.

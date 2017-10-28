@@ -461,10 +461,10 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	/**
 	 * Metodo no implementado.
 	 */
-	@Override
-	public void despuesDeTurno() {
-
-	}
+//	@Override
+//	public void despuesDeTurno() {
+//
+//	}
 	/** Metodo que retorna un boolean si el personaje puede atacar o no.
 	 * Devuelve true si la energia es mayor a la ENERGIAMINIMA,
 	 * puede atacar, y falso si la primera es menor a la ENERGIAMINIMA.
