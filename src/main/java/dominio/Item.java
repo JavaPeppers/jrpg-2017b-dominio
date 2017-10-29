@@ -108,9 +108,4 @@ public class Item implements Serializable {
 		return idItem;
 	}
 
-
-
-
-
-
 }

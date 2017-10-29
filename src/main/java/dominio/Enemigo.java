@@ -42,6 +42,7 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 			} else {
 				salud -= daño;
 			}
+			return daño;
 		}
 		return 0;
 	}
