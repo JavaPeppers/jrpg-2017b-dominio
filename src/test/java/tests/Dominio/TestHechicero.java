@@ -17,11 +17,11 @@ public class TestHechicero {
 		Elfo e = new Elfo("Nico", 100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 3, 1);
 		h.setRandom(new MyRandomStub(0.49,3));
 		e.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(e.getSalud() == 100);
+		Assert.assertEquals(100,e.getSalud());
 		e.reducirSalud(35);
-		Assert.assertTrue(e.getSalud() == 65);
+		Assert.assertEquals(65,e.getSalud());
 		h.habilidadCasta2(e);
-		Assert.assertTrue(e.getSalud() > 65);
+		Assert.assertTrue(e.getSalud()>65);
 	}
 
 	@Test
@@ -30,11 +30,11 @@ public class TestHechicero {
 		Elfo e = new Elfo("Nico", 100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 3, 1);
 		h.setRandom(new MyRandomStub(0.49,3));
 		e.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(e.getSalud() == 100);
+		Assert.assertEquals(100,e.getSalud());
 		if (h.habilidadCasta1(e))
-			Assert.assertTrue(e.getSalud() < 100);
+			Assert.assertEquals(true,e.getSalud() < 100);
 		else
-			Assert.assertTrue(e.getSalud() == 100);
+			Assert.assertEquals(true,e.getSalud() == 100);
 	}
 
 	@Test
@@ -43,17 +43,17 @@ public class TestHechicero {
 		Elfo e = new Elfo("Nico", 100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 3, 1);
 		h.setRandom(new MyRandomStub(0.49,3));
 		e.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(e.getSalud() == 100);
+		Assert.assertEquals(100, e.getSalud());
 		h.reducirSalud(50);
 		h.aumentarEnergia(-55);
 		if (h.habilidadCasta3(e)) {
-			Assert.assertTrue(e.getSalud() < 100);
-			Assert.assertTrue(h.getEnergia() > 50);
-			Assert.assertTrue(h.getSalud() > 50);
+			Assert.assertEquals(true, e.getSalud() < 100);
+			Assert.assertEquals(true, h.getEnergia() > 50);
+			Assert.assertEquals(true, h.getSalud() > 50);
 		} else {
-			Assert.assertTrue(h.getSalud() == 50);
-			Assert.assertTrue(h.getEnergia() < 50);
-			Assert.assertTrue(e.getSalud() == 100);
+			Assert.assertEquals(50, h.getSalud());
+			Assert.assertEquals(true, h.getEnergia() < 50);
+			Assert.assertEquals(100, e.getSalud());
 		}
 	}
 }

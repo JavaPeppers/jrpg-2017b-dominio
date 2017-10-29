@@ -17,21 +17,21 @@ public class TestGuerrero {
 		Elfo e = new Elfo("Nico", 100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 3, 1);
 		h.setRandom(new MyRandomStub(0.49,3));
 		e.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(e.getSalud() == 100);
+		Assert.assertEquals(100,e.getSalud());
 		if (h.habilidadCasta1(e))
 			Assert.assertTrue(e.getSalud() < 100);
 
 		else
-			Assert.assertTrue(e.getSalud() == 100);
+			Assert.assertEquals(100,e.getSalud());
 	}
 
 	@Test
 	public void testAutoDefensa() {
 		Humano h = new Humano("Nico", 100, 100, 25, 20, 30, new Guerrero(0.2, 0.3, 1.5), 0, 1, 1);
 		h.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(h.getDefensa() == 20);
+		Assert.assertEquals(20,h.getDefensa());
 		h.habilidadCasta2(null);
-		Assert.assertTrue(h.getDefensa() == 65);
+		Assert.assertEquals(65,h.getDefensa());
 	}
 
 	@Test
@@ -40,11 +40,11 @@ public class TestGuerrero {
 		Elfo e = new Elfo("Nico", 100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 3, 1);
 		h.setRandom(new MyRandomStub(0.49,3));
 		e.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(e.getSalud() == 100);
+		Assert.assertEquals(100,e.getSalud());
 		if (h.habilidadCasta3(e))
 			Assert.assertTrue(e.getSalud() < 100);
 		else
-			Assert.assertTrue(e.getSalud() == 100);
+			Assert.assertEquals(100, e.getSalud());
 	}
 
 }

@@ -17,13 +17,13 @@ public class TestEnemigosExperiencia {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
 		NonPlayableCharacter npc = new NonPlayableCharacter("Gigante", 1, 0);
 		Personaje.cargarTablaNivel();
-		Assert.assertTrue(h.getExperiencia() == 0);
+		Assert.assertEquals(0,h.getExperiencia());
 		h.setRandom(new MyRandomStub(0.49,3));
 		npc.setRandom(new MyRandomStub(0.49,3));
 		while (npc.estaVivo())
 			h.atacar(npc);
 		h.ganarExperiencia(npc.otorgarExp());
-		Assert.assertTrue(h.getExperiencia() == 30);
+		Assert.assertEquals(30,h.getExperiencia());
 	}
 
 	@Test
@@ -31,7 +31,8 @@ public class TestEnemigosExperiencia {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Gigante", 1, 0);
 		NonPlayableCharacter npc2 = new NonPlayableCharacter("Gigante", 2, 0);
 
-		Assert.assertTrue(npc.otorgarExp() < npc2.otorgarExp());
+		Assert.assertEquals(30,npc.otorgarExp());
+		Assert.assertEquals(60,npc2.otorgarExp());
 	}
 
 	@Test
@@ -41,15 +42,15 @@ public class TestEnemigosExperiencia {
 		Personaje.cargarTablaNivel();
 		h.setRandom(new MyRandomStub(0.49,3));
 		h2.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(h.getExperiencia() == 0);
-		Assert.assertTrue(h2.getExperiencia() == 0);
+		Assert.assertEquals(0,h.getExperiencia());
+		Assert.assertEquals(0,h2.getExperiencia());
 		
 		while (h2.estaVivo())
 			h.atacar(h2);
 
 		h.ganarExperiencia(h2.otorgarExp());
-		Assert.assertTrue(h.getExperiencia() == 40);
-		Assert.assertTrue(h2.getExperiencia() == 0);
+		Assert.assertEquals(40,h.getExperiencia());
+		Assert.assertEquals(0,h2.getExperiencia());
 
 	}
 }

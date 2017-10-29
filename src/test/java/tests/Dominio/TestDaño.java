@@ -16,13 +16,13 @@ public class TestDaño {
 		Orco o = new Orco("Nico", 100, 100, 15, 0, 30, new Guerrero(0.2, 0, 1.5), 0, 1, 1);
 		h.setRandom(new MyRandomStub(0.49,3));
 		o.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(o.getSalud() == 100);
+		Assert.assertEquals(100,o.getSalud());
 		if (h.atacar(o) != 0) {
-			Assert.assertTrue(o.getSalud() == 0);
+			Assert.assertEquals(0,o.getSalud());
 			h.atacar(o);
-			Assert.assertTrue(o.getSalud() == 0);
+			Assert.assertEquals(0,o.getSalud());
 			h.atacar(o);
-			Assert.assertTrue(o.getSalud() == 0);
+			Assert.assertEquals(0,o.getSalud());
 		} else
 			Assert.assertTrue(o.getSalud() == 0);
 	}

@@ -28,7 +28,7 @@ public class TestAliarCombatir {
 		Humano h2 = new Humano("Lautaro",new Asesino(),1);
 		h.setRandom(new MyRandomStub(0.49,3));
 		h2.setRandom(new MyRandomStub(0.49,3));
-		Assert.assertTrue(h2.getSalud()==105);
+		Assert.assertEquals(105,h2.getSalud());
 		if(	h.atacar(h2)!=0)
 			Assert.assertTrue(h2.getSalud()<105);
 		else
@@ -47,7 +47,7 @@ public class TestAliarCombatir {
 		h.setClan(a1);
 		Assert.assertNotNull(h.getClan());
 		h.aliar(h2);
-		Assert.assertTrue(h.getClan()==h2.getClan());
+		Assert.assertEquals(h.getClan(),h2.getClan());
 	}
 	
 }
