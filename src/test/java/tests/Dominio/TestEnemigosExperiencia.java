@@ -9,13 +9,28 @@ import dominio.MyRandomStub;
 import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class TestEnemigosExperiencia.
  */
 public class TestEnemigosExperiencia {
 
+	/** The Constant EXP3. */
+	private static final int EXP3 = 40;
+
+	/** The Constant EXP2. */
+	private static final int EXP2 = 60;
+
+	/** The Constant EXP1. */
+	private static final int EXP1 = 30;
+
+	/** The Constant EXP. */
+	private static final int EXP = 30;
+
+	/** The Constant VAL_INT. */
 	private static final int VAL_INT = 3;
+
+	/** The Constant VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**
@@ -25,7 +40,8 @@ public class TestEnemigosExperiencia {
 	public void testPjvsNPC() {
 
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
-		NonPlayableCharacter npc = new NonPlayableCharacter("Gigante", 1, 0);
+		NonPlayableCharacter npc = new NonPlayableCharacter(
+				"Gigante", 1, 0);
 		Personaje.cargarTablaNivel();
 		Assert.assertEquals(0, h.getExperiencia());
 		h.setRandom(new MyRandomStub(VAL_DOUBLE, VAL_INT));
@@ -34,7 +50,7 @@ public class TestEnemigosExperiencia {
 			h.atacar(npc);
 		}
 		h.ganarExperiencia(npc.otorgarExp());
-		Assert.assertEquals(30, h.getExperiencia());
+		Assert.assertEquals(EXP, h.getExperiencia());
 	}
 
 	/**
@@ -42,11 +58,13 @@ public class TestEnemigosExperiencia {
 	 */
 	@Test
 	public void testMasFuerteMasExperiencia() {
-		NonPlayableCharacter npc = new NonPlayableCharacter("Gigante", 1, 0);
-		NonPlayableCharacter npc2 = new NonPlayableCharacter("Gigante", 2, 0);
+		NonPlayableCharacter npc = new NonPlayableCharacter(
+				"Gigante", 1, 0);
+		NonPlayableCharacter npc2 = new NonPlayableCharacter(
+				"Gigante", 2, 0);
 
-		Assert.assertEquals(30, npc.otorgarExp());
-		Assert.assertEquals(60, npc2.otorgarExp());
+		Assert.assertEquals(EXP1, npc.otorgarExp());
+		Assert.assertEquals(EXP2, npc2.otorgarExp());
 	}
 
 	/**
@@ -67,7 +85,7 @@ public class TestEnemigosExperiencia {
 		}
 
 		h.ganarExperiencia(h2.otorgarExp());
-		Assert.assertEquals(40, h.getExperiencia());
+		Assert.assertEquals(EXP3, h.getExperiencia());
 		Assert.assertEquals(0, h2.getExperiencia());
 
 	}

@@ -11,8 +11,15 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Personaje;
 
+
+/**
+ * The Class TestPersonajeNuevo.
+ */
 public class TestPersonajeNuevo {
 
+	/**
+	 * Test distancia.
+	 */
 	@Test
 	public void testDistancia() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -20,6 +27,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(0, p1.distanciaCon(p2), 0);
 	}
 
+	/**
+	 * Test aliar ya teniendo alianza.
+	 */
 	@Test
 	public void testAliarYaTeniendoAlianza() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -29,6 +39,9 @@ public class TestPersonajeNuevo {
 		Assert.assertFalse(p1.aliar(p2));
 	}
 
+	/**
+	 * Test aliar por primera vez.
+	 */
 	@Test
 	public void testAliarPorPrimeraVez() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -38,6 +51,9 @@ public class TestPersonajeNuevo {
 		Assert.assertTrue(p1.aliar(p2));
 	}
 
+	/**
+	 * Test salir alianza.
+	 */
 	@Test
 	public void testSalirAlianza() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -48,6 +64,9 @@ public class TestPersonajeNuevo {
 		Assert.assertNull(p1.getClan());
 	}
 
+	/**
+	 * Test ser robado.
+	 */
 	@Test
 	public void testSerRobado() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -58,6 +77,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(0, p1.getSalud());
 	}
 
+	/**
+	 * Test ser desenergizado.
+	 */
 	@Test
 	public void testSerDesenergizado() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -68,6 +90,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(0, p1.getEnergia());
 	}
 
+	/**
+	 * Test puedo atacar.
+	 */
 	@Test
 	public void testPuedoAtacar() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -77,6 +102,9 @@ public class TestPersonajeNuevo {
 		Assert.assertFalse(p1.puedeAtacar());
 	}
 
+	/**
+	 * Test atacar golpe critico.
+	 */
 	@Test
 	public void testAtacarGolpeCritico() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -90,6 +118,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(12, p1.atacar(p2));
 	}
 
+	/**
+	 * Test restablecer salud.
+	 */
 	@Test
 	public void testRestablecerSalud() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -99,6 +130,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(105, p1.getSalud());
 	}
 
+	/**
+	 * Test restablecer energia.
+	 */
 	@Test
 	public void testRestablecerEnergia() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -108,6 +142,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(105, p1.getEnergia());
 	}
 
+	/**
+	 * Test ser atacado.
+	 */
 	@Test
 	public void testSerAtacado() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -119,6 +156,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(0, p1.serAtacado(900));
 	}
 
+	/**
+	 * Test ser energizado.
+	 */
 	@Test
 	public void testSerEnergizado() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -128,12 +168,18 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(105, p1.getEnergia());
 	}
 
+	/**
+	 * Test nombre raza.
+	 */
 	@Test
 	public void testNombreRaza() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
 		Assert.assertEquals("Humano", p1.getNombreRaza());
 	}
 
+	/**
+	 * Test set magia.
+	 */
 	@Test
 	public void testSetMagia() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -141,12 +187,18 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(20, p1.getMagia());
 	}
 
+	/**
+	 * Test get id personaje.
+	 */
 	@Test
 	public void testGetIdPersonaje() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
 		Assert.assertEquals(2, p1.getIdPersonaje());
 	}
 
+	/**
+	 * Test aumentar salud.
+	 */
 	@Test
 	public void testAumentarSalud() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -154,6 +206,9 @@ public class TestPersonajeNuevo {
 		Assert.assertEquals(115, p1.getSalud());
 	}
 
+	/**
+	 * Test actualizar atributos.
+	 */
 	@Test
 	public void testActualizarAtributos() {
 		Personaje p1 = new Humano("Ben Affleck", new Asesino(), 2);
@@ -165,7 +220,8 @@ public class TestPersonajeNuevo {
 		p1.actualizarAtributos(mapaso);
 		Assert.assertEquals(20, p1.getSalud());
 		Assert.assertEquals(10, p1.getEnergia());
-		Assert.assertEquals(p1.calcularPuntosDeDefensa(), p1.getDestreza());
+		Assert.assertEquals(p1.calcularPuntosDeDefensa(),
+				p1.getDestreza());
 
 	}
 }

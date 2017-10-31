@@ -7,12 +7,20 @@ import org.junit.Test;
 
 import dominio.Item;
 
+
+/**
+ * The Class TestItems.
+ */
 public class TestItems {
 
+	/**
+	 * Test crear item.
+	 */
 	@Test
 	public void testCrearItem() {
 		try {
-			Item i = new Item(1, "Cuchillo", 1, 0, 1, 1, 1, 1, "TunicaRoja.png", "TunicaRoja.png");
+			Item i = new Item(1, "Cuchillo", 1, 0, 1, 1, 1, 1,
+					"TunicaRoja.png", "TunicaRoja.png");
 			Assert.assertEquals(1, i.getIdItem());
 			Assert.assertEquals("Cuchillo", i.getNombre());
 			Assert.assertEquals(0, i.getBonusSalud());

@@ -11,40 +11,84 @@ import dominio.Humano;
 import dominio.Orco;
 import dominio.Personaje;
 
+
+/**
+ * The Class TestRefactoreoAtributos.
+ */
 public class TestRefactoreoAtributos {
 
+	/** The Constant TOPE2_ELFO. */
+	private static final int TOPE2_ELFO = 110;
+
+	/** The Constant TOPE1_ELFO. */
+	private static final int TOPE1_ELFO = 100;
+
+	/** The Constant TOPE2_ORCO. */
+	private static final int TOPE2_ORCO = 100;
+
+	/** The Constant TOPE1_ORCO. */
+	private static final int TOPE1_ORCO = 110;
+
+	/** The Constant TOPE_HUMANO. */
+	private static final int TOPE_HUMANO = 105;
+
+	/** The Constant INTELIG_HECHICERO. */
+	private static final int INTELIG_HECHICERO = 15;
+
+	/** The Constant FUERZA_GUERRERO. */
+	private static final int FUERZA_GUERRERO = 15;
+
+	/** The Constant DEST_ASESINO. */
+	private static final int DEST_ASESINO = 15;
+
+	/**
+	 * Test destreza asesino.
+	 */
 	@Test
 	public void testDestrezaAsesino() {
 		Personaje p = new Humano("Ben Affleck", new Asesino(), 1);
-		Assert.assertEquals(15, p.getDestreza());
+		Assert.assertEquals(DEST_ASESINO, p.getDestreza());
 	}
 
+	/**
+	 * Test fuerza guerrero.
+	 */
 	@Test
 	public void testFuerzaGuerrero() {
 		Personaje p = new Humano("Ben Affleck", new Guerrero(), 1);
-		Assert.assertEquals(15, p.getFuerza());
+		Assert.assertEquals(FUERZA_GUERRERO, p.getFuerza());
 	}
 
+	/**
+	 * Test inteligencia hechicero.
+	 */
 	@Test
 	public void testInteligenciaHechicero() {
 		Personaje p = new Humano("Ben Affleck", new Hechicero(), 1);
-		Assert.assertEquals(15, p.getInteligencia());
+		Assert.assertEquals(INTELIG_HECHICERO, p.getInteligencia());
 	}
 
+	/**
+	 * Test full humano.
+	 */
 	@Test
 	public void testFullHumano() {
 		Personaje p = new Humano("Ben Affleck", new Asesino(), 1);
 		Personaje p1 = new Humano("Ben Affleck", new Hechicero(), 1);
 		Personaje p2 = new Humano("Ben Affleck", new Guerrero(), 1);
-		// Testeo que sin importar la casta, sigue teniendo la misma energia y
+		// Testeo que sin importar la casta,
+		//sigue teniendo la misma energia y
 		// salud porque eso depende de la Raza
-		Assert.assertEquals(105, p.getSaludTope());
-		Assert.assertEquals(105, p.getEnergiaTope());
-		Assert.assertEquals(105, p1.getSaludTope());
-		Assert.assertEquals(105, p1.getEnergiaTope());
-		String[] hCastaA = {"Golpe Critico", "Aumentar Evasion", "Robar" };
-		String[] hCastaH = {"Bola de Fuego", "Curar Aliado", "Robar Energia y Salud" };
-		String[] hCastaG = {"Ataque Doble", "Aumentar Defensa", "Ignorar Defensa" };
+		Assert.assertEquals(TOPE_HUMANO, p.getSaludTope());
+		Assert.assertEquals(TOPE_HUMANO, p.getEnergiaTope());
+		Assert.assertEquals(TOPE_HUMANO, p1.getSaludTope());
+		Assert.assertEquals(TOPE_HUMANO, p1.getEnergiaTope());
+		String[] hCastaA = {"Golpe Critico", "Aumentar Evasion",
+				"Robar" };
+		String[] hCastaH = {"Bola de Fuego", "Curar Aliado",
+				"Robar Energia y Salud" };
+		String[] hCastaG = {"Ataque Doble", "Aumentar Defensa",
+				"Ignorar Defensa" };
 		String[] hRaza = {"Incentivar", "Golpe Fatal" };
 		Assert.assertArrayEquals(hCastaA, p.getHabilidadesCasta());
 		Assert.assertArrayEquals(hCastaH, p1.getHabilidadesCasta());
@@ -53,20 +97,27 @@ public class TestRefactoreoAtributos {
 
 	}
 
+	/**
+	 * Test full orco.
+	 */
 	@Test
 	public void testFullOrco() {
 		Personaje p = new Orco("Ben Affleck", new Asesino(), 1);
 		Personaje p1 = new Orco("Ben Affleck", new Hechicero(), 1);
 		Personaje p2 = new Orco("Ben Affleck", new Guerrero(), 1);
-		// Testeo que sin importar la casta, sigue teniendo la misma energia y
+		// Testeo que sin importar la casta,
+		//sigue teniendo la misma energia y
 		// salud porque eso depende de la Raza
-		Assert.assertEquals(110, p.getSaludTope());
-		Assert.assertEquals(100, p.getEnergiaTope());
-		Assert.assertEquals(110, p1.getSaludTope());
-		Assert.assertEquals(100, p1.getEnergiaTope());
-		String[] hCastaA = {"Golpe Critico", "Aumentar Evasion", "Robar" };
-		String[] hCastaH = {"Bola de Fuego", "Curar Aliado", "Robar Energia y Salud" };
-		String[] hCastaG = {"Ataque Doble", "Aumentar Defensa", "Ignorar Defensa" };
+		Assert.assertEquals(TOPE1_ORCO, p.getSaludTope());
+		Assert.assertEquals(TOPE2_ORCO, p.getEnergiaTope());
+		Assert.assertEquals(TOPE1_ORCO, p1.getSaludTope());
+		Assert.assertEquals(TOPE2_ORCO, p1.getEnergiaTope());
+		String[] hCastaA = {"Golpe Critico", "Aumentar Evasion",
+				"Robar" };
+		String[] hCastaH = {"Bola de Fuego", "Curar Aliado",
+				"Robar Energia y Salud" };
+		String[] hCastaG = {"Ataque Doble", "Aumentar Defensa",
+				"Ignorar Defensa" };
 		String[] hRaza = {"Golpe Defensa", "Mordisco de Vida" };
 		Assert.assertArrayEquals(hCastaA, p.getHabilidadesCasta());
 		Assert.assertArrayEquals(hCastaH, p1.getHabilidadesCasta());
@@ -74,20 +125,27 @@ public class TestRefactoreoAtributos {
 		Assert.assertArrayEquals(hRaza, p.getHabilidadesRaza());
 	}
 
+	/**
+	 * Test full elfo.
+	 */
 	@Test
 	public void testFullElfo() {
 		Personaje p = new Elfo("Ben Affleck", new Asesino(), 1);
 		Personaje p1 = new Elfo("Ben Affleck", new Hechicero(), 1);
 		Personaje p2 = new Elfo("Ben Affleck", new Guerrero(), 1);
-		// Testeo que sin importar la casta, sigue teniendo la misma energia y
+		// Testeo que sin importar la casta,
+		//sigue teniendo la misma energia y
 		// salud porque eso depende de la Raza
-		Assert.assertEquals(100, p.getSaludTope());
-		Assert.assertEquals(110, p.getEnergiaTope());
-		Assert.assertEquals(100, p1.getSaludTope());
-		Assert.assertEquals(110, p1.getEnergiaTope());
-		String[] hCastaA = {"Golpe Critico", "Aumentar Evasion", "Robar" };
-		String[] hCastaH = {"Bola de Fuego", "Curar Aliado", "Robar Energia y Salud" };
-		String[] hCastaG = {"Ataque Doble", "Aumentar Defensa", "Ignorar Defensa" };
+		Assert.assertEquals(TOPE1_ELFO, p.getSaludTope());
+		Assert.assertEquals(TOPE2_ELFO, p.getEnergiaTope());
+		Assert.assertEquals(TOPE1_ELFO, p1.getSaludTope());
+		Assert.assertEquals(TOPE2_ELFO, p1.getEnergiaTope());
+		String[] hCastaA = {"Golpe Critico", "Aumentar Evasion",
+				"Robar" };
+		String[] hCastaH = {"Bola de Fuego", "Curar Aliado",
+				"Robar Energia y Salud" };
+		String[] hCastaG = {"Ataque Doble", "Aumentar Defensa",
+				"Ignorar Defensa" };
 		String[] hRaza = {"Golpe Level", "Ataque Bosque" };
 		Assert.assertArrayEquals(hCastaA, p.getHabilidadesCasta());
 		Assert.assertArrayEquals(hCastaH, p1.getHabilidadesCasta());

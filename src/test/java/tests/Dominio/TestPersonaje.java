@@ -10,77 +10,145 @@ import dominio.Hechicero;
 import dominio.Humano;
 import dominio.Orco;
 
+
+/**
+ * The Class TestPersonaje se usa para testear a cada personaje.
+ */
 public class TestPersonaje {
 
+	/** The Constant ID_HUMANO. */
+	private static final int ID_HUMANO = 3;
+
+	/** The Constant ID_ORCO. */
+	private static final int ID_ORCO = 3;
+
+	/** The Constant ID_ELFO. */
+	private static final int ID_ELFO = 3;
+
+	/** The Constant ENERGIA_ORCO. */
+	private static final int ENERGIA_ORCO = 100;
+
+	/** The Constant SALUD_ORCO. */
+	private static final int SALUD_ORCO = 110;
+
+	/** The Constant ENERGIA_ELFO. */
+	private static final int ENERGIA_ELFO = 110;
+
+	/** The Constant SALUD_ELFO. */
+	private static final int SALUD_ELFO = 100;
+
+	/** The Constant INTELIG_ASESINO. */
+	private static final int INTELIG_ASESINO = 10;
+
+	/** The Constant DESTREZA_ASESINO. */
+	private static final int DESTREZA_ASESINO = 15;
+
+	/** The Constant FUERZA_ASESINO. */
+	private static final int FUERZA_ASESINO = 10;
+
+	/** The Constant INTELIG_HECHICERO. */
+	private static final int INTELIG_HECHICERO = 15;
+
+	/** The Constant DESTREZA_HECHICERO. */
+	private static final int DESTREZA_HECHICERO = 10;
+
+	/** The Constant FUERZA_HECHICERO. */
+	private static final int FUERZA_HECHICERO = 10;
+
+	/** The Constant INTELIGENCIA_GUERRERO. */
+	private static final int INTELIGENCIA_GUERRERO = 10;
+
+	/** The Constant DESTREZA_GUERRERO. */
+	private static final int DESTREZA_GUERRERO = 10;
+
+	/** The Constant FUERZA_GUERRERO. */
+	private static final int FUERZA_GUERRERO = 15;
+
+	/** The Constant ENERGIA_HUMANO. */
+	private static final int ENERGIA_HUMANO = 105;
+
+	/** The Constant SALUD_HUMANO. */
+	private static final int SALUD_HUMANO = 105;
+
+	/**
+	 * Test humano.
+	 */
 	@Test
 	public void testHumano() {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
-		Assert.assertEquals(105, h.getSalud());
-		Assert.assertEquals(105, h.getEnergia());
-		Assert.assertEquals(15, h.getFuerza());
-		Assert.assertEquals(10, h.getDestreza());
-		Assert.assertEquals(10, h.getInteligencia());
+		Assert.assertEquals(SALUD_HUMANO, h.getSalud());
+		Assert.assertEquals(ENERGIA_HUMANO, h.getEnergia());
+		Assert.assertEquals(FUERZA_GUERRERO, h.getFuerza());
+		Assert.assertEquals(DESTREZA_GUERRERO, h.getDestreza());
+		Assert.assertEquals(INTELIGENCIA_GUERRERO, h.getInteligencia());
 
 		Humano h2 = new Humano("Lautaro", new Hechicero(), 2);
-		Assert.assertEquals(105, h2.getSalud());
-		Assert.assertEquals(105, h2.getEnergia());
-		Assert.assertEquals(10, h2.getFuerza());
-		Assert.assertEquals(10, h2.getDestreza());
-		Assert.assertEquals(15, h2.getInteligencia());
+		Assert.assertEquals(SALUD_HUMANO, h2.getSalud());
+		Assert.assertEquals(ENERGIA_HUMANO, h2.getEnergia());
+		Assert.assertEquals(FUERZA_HECHICERO, h2.getFuerza());
+		Assert.assertEquals(DESTREZA_HECHICERO, h2.getDestreza());
+		Assert.assertEquals(INTELIG_HECHICERO, h2.getInteligencia());
 
-		Humano h3 = new Humano("Hernan", new Asesino(), 3);
-		Assert.assertEquals(105, h3.getSalud());
-		Assert.assertEquals(105, h3.getEnergia());
-		Assert.assertEquals(10, h3.getFuerza());
-		Assert.assertEquals(15, h3.getDestreza());
-		Assert.assertEquals(10, h3.getInteligencia());
+		Humano h3 = new Humano("Hernan", new Asesino(), ID_HUMANO);
+		Assert.assertEquals(SALUD_HUMANO, h3.getSalud());
+		Assert.assertEquals(ENERGIA_HUMANO, h3.getEnergia());
+		Assert.assertEquals(FUERZA_ASESINO, h3.getFuerza());
+		Assert.assertEquals(DESTREZA_ASESINO, h3.getDestreza());
+		Assert.assertEquals(INTELIG_ASESINO, h3.getInteligencia());
 	}
 
+	/**
+	 * Test elfo.
+	 */
 	@Test
 	public void testElfo() {
 		Elfo e = new Elfo("Nicolas", new Guerrero(), 1);
-		Assert.assertEquals(100, e.getSalud());
-		Assert.assertEquals(110, e.getEnergia());
-		Assert.assertEquals(15, e.getFuerza());
-		Assert.assertEquals(10, e.getDestreza());
-		Assert.assertEquals(10, e.getInteligencia());
+		Assert.assertEquals(SALUD_ELFO, e.getSalud());
+		Assert.assertEquals(ENERGIA_ELFO, e.getEnergia());
+		Assert.assertEquals(FUERZA_GUERRERO, e.getFuerza());
+		Assert.assertEquals(DESTREZA_GUERRERO, e.getDestreza());
+		Assert.assertEquals(INTELIGENCIA_GUERRERO, e.getInteligencia());
 
 		Elfo e2 = new Elfo("Lautaro", new Hechicero(), 2);
-		Assert.assertEquals(100, e2.getSalud());
-		Assert.assertEquals(110, e2.getEnergia());
-		Assert.assertEquals(10, e2.getFuerza());
-		Assert.assertEquals(10, e2.getDestreza());
-		Assert.assertEquals(15, e2.getInteligencia());
+		Assert.assertEquals(SALUD_ELFO, e2.getSalud());
+		Assert.assertEquals(ENERGIA_ELFO, e2.getEnergia());
+		Assert.assertEquals(FUERZA_HECHICERO, e2.getFuerza());
+		Assert.assertEquals(DESTREZA_HECHICERO, e2.getDestreza());
+		Assert.assertEquals(INTELIG_HECHICERO, e2.getInteligencia());
 
-		Elfo e3 = new Elfo("Hernan", new Asesino(), 3);
-		Assert.assertEquals(100, e3.getSalud());
-		Assert.assertEquals(110, e3.getEnergia());
-		Assert.assertEquals(10, e3.getFuerza());
-		Assert.assertEquals(15, e3.getDestreza());
-		Assert.assertEquals(10, e3.getInteligencia());
+		Elfo e3 = new Elfo("Hernan", new Asesino(), ID_ELFO);
+		Assert.assertEquals(SALUD_ELFO, e3.getSalud());
+		Assert.assertEquals(ENERGIA_ELFO, e3.getEnergia());
+		Assert.assertEquals(FUERZA_ASESINO, e3.getFuerza());
+		Assert.assertEquals(DESTREZA_ASESINO, e3.getDestreza());
+		Assert.assertEquals(INTELIG_ASESINO, e3.getInteligencia());
 	}
 
+	/**
+	 * Test orco.
+	 */
 	@Test
 	public void testOrco() {
 		Orco o = new Orco("Nicolas", new Guerrero(), 1);
-		Assert.assertEquals(110, o.getSalud());
-		Assert.assertEquals(100, o.getEnergia());
-		Assert.assertEquals(15, o.getFuerza());
-		Assert.assertEquals(10, o.getDestreza());
-		Assert.assertEquals(10, o.getInteligencia());
+		Assert.assertEquals(SALUD_ORCO, o.getSalud());
+		Assert.assertEquals(ENERGIA_ORCO, o.getEnergia());
+		Assert.assertEquals(FUERZA_GUERRERO, o.getFuerza());
+		Assert.assertEquals(DESTREZA_GUERRERO, o.getDestreza());
+		Assert.assertEquals(INTELIGENCIA_GUERRERO, o.getInteligencia());
 
 		Orco o2 = new Orco("Lautaro", new Hechicero(), 2);
-		Assert.assertEquals(110, o2.getSalud());
-		Assert.assertEquals(100, o2.getEnergia());
-		Assert.assertEquals(10, o2.getFuerza());
-		Assert.assertEquals(15, o2.getInteligencia());
+		Assert.assertEquals(SALUD_ORCO, o2.getSalud());
+		Assert.assertEquals(ENERGIA_ORCO, o2.getEnergia());
+		Assert.assertEquals(FUERZA_HECHICERO, o2.getFuerza());
+		Assert.assertEquals(DESTREZA_HECHICERO, o2.getDestreza());
+		Assert.assertEquals(INTELIG_HECHICERO, o2.getInteligencia());
 
-		Orco o3 = new Orco("Hernan", new Asesino(), 3);
-		Assert.assertEquals(110, o3.getSalud());
-		Assert.assertEquals(100, o3.getEnergia());
-		Assert.assertEquals(10, o3.getFuerza());
-		Assert.assertEquals(15, o3.getDestreza());
-		Assert.assertEquals(10, o3.getInteligencia());
+		Orco o3 = new Orco("Hernan", new Asesino(), ID_ORCO);
+		Assert.assertEquals(SALUD_ORCO, o3.getSalud());
+		Assert.assertEquals(ENERGIA_ORCO, o3.getEnergia());
+		Assert.assertEquals(FUERZA_ASESINO, o3.getFuerza());
+		Assert.assertEquals(DESTREZA_ASESINO, o3.getDestreza());
+		Assert.assertEquals(INTELIG_ASESINO, o3.getInteligencia());
 	}
 
 }
