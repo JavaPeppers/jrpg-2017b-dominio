@@ -3,7 +3,9 @@ package tests.Dominio;
 import org.junit.Assert;
 import org.junit.Test;
 
-import dominio.*;
+import dominio.Guerrero;
+import dominio.Humano;
+import dominio.Personaje;
 
 public class TestSubirNivel {
 
@@ -11,9 +13,9 @@ public class TestSubirNivel {
 	public void testSubirdeNivel() {
 		Personaje.cargarTablaNivel();
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
-		Assert.assertEquals(1,h.getNivel());
+		Assert.assertEquals(1, h.getNivel());
 		h.ganarExperiencia(50);
-		Assert.assertEquals(2,h.getNivel());
+		Assert.assertEquals(2, h.getNivel());
 	}
 
 	@Test
@@ -23,7 +25,7 @@ public class TestSubirNivel {
 		h.ganarExperiencia(300000);
 		Assert.assertEquals(100, h.getNivel());
 		h.subirNivel();
-		Assert.assertEquals(100,h.getNivel());
+		Assert.assertEquals(100, h.getNivel());
 
 	}
 
@@ -31,8 +33,8 @@ public class TestSubirNivel {
 	public void testGanarMuchaExp() {
 		Personaje.cargarTablaNivel();
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
-		Assert.assertEquals(1,h.getNivel());
+		Assert.assertEquals(1, h.getNivel());
 		h.ganarExperiencia(150);
-		Assert.assertEquals(3,h.getNivel());
+		Assert.assertEquals(3, h.getNivel());
 	}
 }

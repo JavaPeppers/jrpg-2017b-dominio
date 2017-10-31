@@ -6,47 +6,80 @@ import java.io.IOException;
 import java.io.Serializable;
 
 import javax.imageio.ImageIO;
+
 /**
  * Clase que representa los Items que posee el personaje.
  */
+
 public class Item implements Serializable {
+
+	/** The id item. */
 	private final int idItem;
+
+	/** The foto. */
 	private final String foto;
+
+	/** The nombre. */
 	private final String nombre;
+
+	/** The wear location. */
 	private final int wearLocation;
+
+	/** The bonus salud. */
 	private final int bonusSalud;
+
+	/** The bonus energia. */
 	private final int bonusEnergia;
+
+	/** The bonus fuerza. */
 	private final int bonusFuerza;
+
+	/** The bonus destreza. */
 	private final int bonusDestreza;
+
+	/** The bonus inteligencia. */
 	private final int bonusInteligencia;
+
+	/** The foto equipado. */
 	private final String fotoEquipado;
 	/**
 	 * Constructor del Item.
-	 * @param idItem Entero que representa el id del item.
-	 * @param nombre String que representa el nombre del item.
-	 * @param wearLocation Entero que representa donde se usa el item.
-	 * @param bonusSalud Entero que representa el bonus de salud del item.
-	 * @param bonusEnergia Entero que representa el bonus de energia del item.
-	 * @param bonusFuerza Entero que representa el bonus de fuerza del item.
-	 * @param bonusDestreza Entero que representa el bonus de destreza del item.
-	 * @param bonusInteligencia Entero que representa el bonus de inteligencia del item.
-	 * @param foto String que representa el path de la foto del item.
-	 * @param fotoEquipado String que representa la foto cuando el item está equipado.
+	 * @param idItemParam Entero que representa el id del item.
+	 * @param nombreParam String que representa el nombre del item.
+	 * @param wearLocationParam Entero que representa donde se usa el item.
+	 * @param bonusSaludParam Entero que representa
+	 *  el bonus de salud del item.
+	 * @param bonusEnergiaParam Entero que representa
+	 *  el bonus de energia del item.
+	 * @param bonusFuerzaParam Entero que representa
+	 *  el bonus de fuerza del item.
+	 * @param bonusDestrezaParam Entero que representa
+	 *  el bonus de destreza del item.
+	 * @param bonusInteligenciaParam Entero que representa
+	 *  el bonus de inteligencia del item.
+	 * @param fotoParam String que representa el path de la foto del item.
+	 * @param fotoEquipadoParam String que representa la foto
+	 *  cuando el item está equipado.
 	 * @throws IOException Cuando no se encuentra la foto del item.
 	 */
-	public Item(final int idItem, final String nombre, final int wearLocation,
-			final int bonusSalud, final int bonusEnergia, final int bonusFuerza, final int bonusDestreza,
-			final int bonusInteligencia, final String foto, final String fotoEquipado) throws IOException {
-		this.foto = foto;
-		this.idItem = idItem;
-		this.nombre = nombre;
-		this.wearLocation = wearLocation;
-		this.bonusSalud = bonusSalud;
-		this.bonusEnergia = bonusEnergia;
-		this.bonusFuerza = bonusFuerza;
-		this.bonusDestreza = bonusDestreza;
-		this.bonusInteligencia = bonusInteligencia;
-		this.fotoEquipado = fotoEquipado;
+	public Item(final int idItemParam, final String nombreParam,
+			final int wearLocationParam,
+			final int bonusSaludParam, final int bonusEnergiaParam,
+			final int bonusFuerzaParam,
+			final int bonusDestrezaParam,
+			final int bonusInteligenciaParam,
+			final String fotoParam,
+			final String fotoEquipadoParam) throws IOException {
+		this.foto = fotoParam;
+		this.idItem = idItemParam;
+		this.nombre = nombreParam;
+		this.wearLocation = wearLocationParam;
+		this.bonusSalud = bonusSaludParam;
+		this.bonusEnergia = bonusEnergiaParam;
+		this.bonusFuerza = bonusFuerzaParam;
+		this.bonusDestreza = bonusDestrezaParam;
+		this.bonusInteligencia = bonusInteligenciaParam;
+		this.fotoEquipado = fotoEquipadoParam;
 	}
 
 	/**
@@ -55,7 +88,6 @@ public class Item implements Serializable {
 	 * @throws IOException Cuando no se encuentra la foto del item.
 	 */
 	public BufferedImage getFoto() throws IOException {
-		// TODO Auto-generated method stub
 		return ImageIO.read(new File("recursos//" + foto));
 	}
 	/**

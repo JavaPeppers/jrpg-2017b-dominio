@@ -3,7 +3,12 @@ package tests.Dominio;
 import org.junit.Assert;
 import org.junit.Test;
 
-import dominio.*;
+import dominio.Asesino;
+import dominio.Elfo;
+import dominio.Guerrero;
+import dominio.Hechicero;
+import dominio.Humano;
+import dominio.Orco;
 
 public class TestPersonaje {
 
@@ -28,13 +33,13 @@ public class TestPersonaje {
 		Assert.assertEquals(105, h3.getEnergia());
 		Assert.assertEquals(10, h3.getFuerza());
 		Assert.assertEquals(15, h3.getDestreza());
-		Assert.assertEquals(10,h3.getInteligencia());
+		Assert.assertEquals(10, h3.getInteligencia());
 	}
 
 	@Test
 	public void testElfo() {
 		Elfo e = new Elfo("Nicolas", new Guerrero(), 1);
-		Assert.assertEquals(100,e.getSalud());
+		Assert.assertEquals(100, e.getSalud());
 		Assert.assertEquals(110, e.getEnergia());
 		Assert.assertEquals(15, e.getFuerza());
 		Assert.assertEquals(10, e.getDestreza());
@@ -77,5 +82,5 @@ public class TestPersonaje {
 		Assert.assertEquals(15, o3.getDestreza());
 		Assert.assertEquals(10, o3.getInteligencia());
 	}
-	
+
 }

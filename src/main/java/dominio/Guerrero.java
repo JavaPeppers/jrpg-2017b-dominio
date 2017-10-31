@@ -36,7 +36,8 @@ public class Guerrero extends Casta {
 	 * @param danioCrit Valor por el cual será
 	 * multiplicado el golpe básico
 	 */
-	public Guerrero(final double probCrit, final double evasion, final double danioCrit) {
+	public Guerrero(final double probCrit,
+			final double evasion, final double danioCrit) {
 		super(probCrit, evasion, danioCrit);
 	}
 	/** El constructor por defecto, llama al constructor por defecto.
@@ -64,10 +65,12 @@ public class Guerrero extends Casta {
 	 *  la habilidad.
 	 */
 	@Override
-	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad1(final Personaje caster,
+			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado(caster.getAtaque() * MULTIPLICADORFUERZA) > 0) {
+			if (atacado.serAtacado(caster.getAtaque()
+					* MULTIPLICADORFUERZA) > 0) {
 				return true;
 			}
 		}
@@ -95,7 +98,8 @@ public class Guerrero extends Casta {
 	 * habilidad
 	 */
 	@Override
-	public final boolean habilidad2(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad2(
+			final Personaje caster, final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			caster.aumentarDefensa(caster.getMagia());
@@ -124,14 +128,21 @@ public class Guerrero extends Casta {
 	 * la habilidad
 	 */
 	@Override
-	public final boolean habilidad3(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad3(
+			final Personaje caster, final Peleable atacado) {
+
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (atacado instanceof Personaje) {
-				int defensaOriginal = ((Personaje) atacado).getDefensa();
-				((Personaje) atacado).reducirDefensa(((Personaje) atacado).getDefensa());
-				if (atacado.serAtacado(caster.getAtaque()) > 0) {
-					((Personaje) atacado).aumentarDefensa(defensaOriginal);
+				int defensaOriginal
+				     = ((Personaje) atacado).getDefensa();
+				((Personaje) atacado).reducirDefensa((
+						(Personaje) atacado).
+						getDefensa());
+				if (atacado.serAtacado(caster.getAtaque())
+						> 0) {
+					((Personaje) atacado).aumentarDefensa(
+							defensaOriginal);
 					return true;
 				}
 			}
@@ -183,7 +194,8 @@ public class Guerrero extends Casta {
 	 */
 	@Override
 	public final String[] getHabilidadesCasta() {
-		return new String[] {"Ataque Doble", "Aumentar Defensa", "Ignorar Defensa"};
+		return new String[] {"Ataque Doble",
+				"Aumentar Defensa", "Ignorar Defensa"};
 	}
 }
 

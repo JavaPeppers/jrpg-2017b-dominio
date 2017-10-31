@@ -10,7 +10,8 @@ import javax.swing.DefaultListModel;
  * La cual sirve de base para la creacion de las distintas Razas.
  */
 
-public abstract class Personaje extends MadreDeTodo implements Peleable, Serializable {
+public abstract class Personaje extends
+     MadreDeTodo implements Peleable, Serializable {
 	/**
 	 * Salud del personaje.
 	 */
@@ -211,7 +212,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		Personaje.getTablaDeNiveles()[0] = 0;
 		Personaje.getTablaDeNiveles()[1] = 0;
 		for (int i = 2; i < CANTIDADNIVELES; i++) {
-			Personaje.getTablaDeNiveles()[i] = Personaje.getTablaDeNiveles()[i - 1] + CONSTANTENIVEL;
+			Personaje.getTablaDeNiveles()[i]
+					= Personaje.getTablaDeNiveles()[i - 1]
+							+ CONSTANTENIVEL;
 		}
 	}
 	/** La clase Personaje es la cual posee todos los atributos.
@@ -220,15 +223,16 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * Dependiendo de qué instancia es el parámetro casta,
 	 * se incrementará en 5 un atributo del personaje
 	 * @param nombre Indica el nombre el personaje
-	 * @param casta Indica la casta(Raza) del personaje
+	 * @param castaParam Indica la casta(Raza) del personaje
 	 * y con ella el incremento que tendrá cierto atributo
 	 * @param id Identificador del personaje
 	 */
-	public Personaje(final String nombre, final Casta casta, final int id) {
+	public Personaje(final String nombre,
+			final Casta castaParam, final int id) {
 		super(FUERZAINICIAL, DEFENSAINICIAL, NIVELINICIAL, nombre);
 
 
-		this.casta = casta;
+		this.casta = castaParam;
 		this.idPersonaje = id;
 		experiencia = EXPERIENCIAINICIAL;
 		inteligencia = INTELIGENCIANICIAL;
@@ -262,37 +266,38 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * de sólo 3 parámetros,
 	 * éste recibe la mayoría de los atributos.
 	 * @param nombre Nombre del personaje
-	 * @param salud Salud del personaje
-	 * @param energia Energia del personaje
+	 * @param saludParam Salud del personaje
+	 * @param energiaParam Energia del personaje
 	 * @param fuerza Fuerza del Personaje
-	 * @param destreza Destreza del personaje
-	 * @param inteligencia Inteligencia del personaje
-	 * @param casta Casta(Raza) del personaje
-	 * @param experiencia Experiencia del personaje
+	 * @param destrezaParam Destreza del personaje
+	 * @param inteligenciaParam Inteligencia del personaje
+	 * @param castaParam Casta(Raza) del personaje
+	 * @param experienciaParam Experiencia del personaje
 	 * @param nivel Nivel del personaje
-	 * @param idPersonaje Id del personaje
+	 * @param idPersonajeParam Id del personaje
 	 */
-	public Personaje(final String nombre, final int salud, final int energia, final int fuerza,
-			final int destreza, final int inteligencia, final Casta casta,
-			final int experiencia, final int nivel,
-			final int idPersonaje) {
+	public Personaje(final String nombre, final int saludParam,
+			final int energiaParam, final int fuerza,
+			final int destrezaParam, final int inteligenciaParam,
+			final Casta castaParam, final int experienciaParam,
+			final int nivel, final int idPersonajeParam) {
 		super(fuerza, 0, nivel, nombre);
 
-		this.salud = salud;
-		this.energia = energia;
+		this.salud = saludParam;
+		this.energia = energiaParam;
 
-		this.destreza = destreza;
+		this.destreza = destrezaParam;
 		this.aumentarDefensa(destreza);
-		this.inteligencia = inteligencia;
-		this.casta = casta;
+		this.inteligencia = inteligenciaParam;
+		this.casta = castaParam;
 
-		this.experiencia = experiencia;
+		this.experiencia = experienciaParam;
 
 
 		this.saludTope = this.salud;
 		this.energiaTope = this.energia;
 
-		this.idPersonaje = idPersonaje;
+		this.idPersonaje = idPersonajeParam;
 
 		this.ataque = this.calcularPuntosDeAtaque();
 		this.magia = this.calcularPuntosDeMagia();
@@ -311,12 +316,12 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 	/**Metodo void que sobreescribe el atributo de ataque
 	 * con el parametro enviado.
-	 * @param ataque nuevo valor del ataque del peronaje.
+	 * @param ataqueParam nuevo valor del ataque del peronaje.
 	 */
 
 	@Override
-	public final void setAtaque(final int ataque) {
-		this.ataque = ataque;
+	public final void setAtaque(final int ataqueParam) {
+		this.ataque = ataqueParam;
 	}
 
 	/**Retorna un enetro con la magia del personaje.
@@ -330,10 +335,10 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**Metodo void que sobreescribe el atributo de magia.
 	 * con el parámatero.
-	 * @param magia Nuevo valor de magia del personaje.
+	 * @param magiaParam Nuevo valor de magia del personaje.
 	 */
-	public final void setMagia(final int magia) {
-		this.magia = magia;
+	public final void setMagia(final int magiaParam) {
+		this.magia = magiaParam;
 	}
 	/**Retorna un String con la alianza del personaje.
 	 * @return Alianza del personaje.
@@ -344,10 +349,10 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	/**Metodo void que sobreescribe el atributo clan.
 	 * Añade al personaje llamador al clan enviado
 	 * como parámetro.
-	 * @param clan Nueva del personaje.
+	 * @param clanParam Nueva del personaje.
 	 */
-	public final void setClan(final Alianza clan) {
-		this.clan = clan;
+	public final void setClan(final Alianza clanParam) {
+		this.clan = clanParam;
 		clan.añadirPersonaje(this);
 	}
 	/**Retorna entero con la salud del personaje.
@@ -437,9 +442,11 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		}
 		if (atacado.getSalud() > 0) {
 
-			if (this.getRandom().nextDouble() <= this.casta.getProbabilidadGolpeCritico()
+			if (this.getRandom().nextDouble()
+					<= this.casta.
+					getProbabilidadGolpeCritico()
 					+ this.destreza / DIVISORDEDESTREZA) {
-				return atacado.serAtacado(this.golpe_critico());
+				return atacado.serAtacado(this.golpeCritico());
 			} else {
 				return atacado.serAtacado(this.ataque);
 			}
@@ -455,7 +462,7 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * el daño critico de la casta que pertenece.
 	 * @return Retorna el golpe critico que puede realizar el personaje.
 	 */
-	public final int golpe_critico() {
+	public final int golpeCritico() {
 		return (int) (this.ataque * this.getCasta().getDañoCritico());
 	}
 	/**
@@ -557,7 +564,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	@Override
 	public final int serAtacado(int danio) {
 
-		if (this.getRandom().nextDouble() >= this.getCasta().getProbabilidadEvitarDaño()) {
+		if (this.getRandom().nextDouble()
+				>= this.getCasta().
+				getProbabilidadEvitarDaño()) {
 			danio -= this.getDefensa();
 			if (danio > 0) {
 				if (salud <= danio) {
@@ -619,11 +628,11 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	/** Metodo void que aumenta la salud actual del personaje.
 	 * Si este aumento es mayor al tope, establece como salud
 	 * actual la maxima que puede tener el personaje.
-	 * @param salud Puntos de salud a sumar al personaje.
+	 * @param saludParam Puntos de salud a sumar al personaje.
 	 */
-	public final void serCurado(final int salud) {
-		if ((this.salud + salud) <= this.saludTope) {
-			this.salud += salud;
+	public final void serCurado(final int saludParam) {
+		if ((this.salud + saludParam) <= this.saludTope) {
+			this.salud += saludParam;
 		} else {
 			this.salud = this.saludTope;
 		}
@@ -631,11 +640,11 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	/**Metodo void que aumenta la energia actual del personaje.
 	 * Si este aumento es mayor al tope establece como energia
 	 * actual la maxima que puede tener el personaje.
-	 * @param energia Puntos de energia a sumar al Personaje.
+	 * @param energiaParam Puntos de energia a sumar al Personaje.
 	 */
-	public final void serEnergizado(final int energia) {
-		if ((this.energia + energia) <= this.energiaTope) {
-			this.energia += energia;
+	public final void serEnergizado(final int energiaParam) {
+		if ((this.energia + energiaParam) <= this.energiaTope) {
+			this.energia += energiaParam;
 		} else {
 			this.energia = this.energiaTope;
 		}
@@ -688,18 +697,20 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * Una vez modificados los atributos mencionados actualiza
 	 * los nuevos puntos de ataque,defensa y magia del personaje.
 	 * @param fuerza Nueva fuerza del personaje
-	 * @param destreza Nueva destreza del personaje
-	 * @param inteligencia Nueva inteligencia del personaje
+	 * @param destrezaParam Nueva destreza del personaje
+	 * @param inteligenciaParam Nueva inteligencia del personaje
 	 */
-	public final void AsignarPuntosSkills(final int fuerza, final int destreza, final int inteligencia) {
+	public final void AsignarPuntosSkills(final int fuerza,
+			final int destrezaParam, final int inteligenciaParam) {
 		if (this.getFuerza() + fuerza <= FUERZAMAXIMA) {
 			this.aumentarFuerza(fuerza);
 		}
-		if (this.destreza + destreza <= DEFENSAMAXIMA) {
-			this.destreza += destreza;
+		if (this.destreza + destrezaParam <= DEFENSAMAXIMA) {
+			this.destreza += destrezaParam;
 		}
-		if (this.inteligencia + inteligencia <= INTELIGENCIAMAXIMA) {
-			this.inteligencia += inteligencia;
+		if (this.inteligencia + inteligenciaParam
+				<= INTELIGENCIAMAXIMA) {
+			this.inteligencia += inteligenciaParam;
 		}
 		this.modificarAtributos();
 	}
@@ -720,8 +731,10 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		}
 		while (this.getNivel() != NIVELMAXIMO
 				&& (this.experiencia >= Personaje.
-				getTablaDeNiveles()[this.getNivel() + 1] + acumuladorExperiencia)) {
-			acumuladorExperiencia += Personaje.getTablaDeNiveles()[this.getNivel() + 1];
+				getTablaDeNiveles()[this.getNivel() + 1]
+						+ acumuladorExperiencia)) {
+			acumuladorExperiencia
+			+= Personaje.getTablaDeNiveles()[this.getNivel() + 1];
 			this.aumentarNivel();
 			this.modificarAtributos();
 			this.saludTope += SALUDTOPESUBIRN;
@@ -739,7 +752,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	public final boolean ganarExperiencia(final int exp) {
 		this.experiencia += exp;
 
-		if (experiencia >= Personaje.getTablaDeNiveles()[this.getNivel() + 1]) {
+		if (experiencia >= Personaje.
+				getTablaDeNiveles()[this.getNivel() + 1]) {
 			subirNivel();
 			return true;
 		}
@@ -759,7 +773,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**Metodo que retorna un Objetc utilizado para
 	 * clonar a un personaje.
-	 * @throws CloneNotSupportedException Excepción de clonación cuando no está implementada
+	 * @throws CloneNotSupportedException Excepción
+	 *  de clonación cuando no está implementada
 	 * @return Retorna un Objetc con los atributos del
 	 * personaje llamador.
 	 */
@@ -774,7 +789,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * @return La distancia entre los dos Personajes
 	 */
 	public final double distanciaCon(final Personaje p) {
-		return Math.sqrt(Math.pow(this.x - p.x, 2) + Math.pow(this.y - p.y, 2));
+		return Math.sqrt(Math.pow(this.x - p.x, 2)
+				+ Math.pow(this.y - p.y, 2));
 	}
 	/**Metodo que retorna un boolean.
 	 * Si pudo realizar exitosamente o no
@@ -911,10 +927,11 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 	/**
 	 * Reemplaza a la tabla de niveles por otra.
-	 * @param tablaDeNiveles tabla de niveles que reemplazará a la anterior.
+	 * @param tablaDeNivelesParam tabla de niveles
+	 *  que reemplazará a la anterior.
 	 */
-	private static void setTablaDeNiveles(final int[] tablaDeNiveles) {
-		Personaje.tablaDeNiveles = tablaDeNiveles;
+	private static void setTablaDeNiveles(final int[] tablaDeNivelesParam) {
+		Personaje.tablaDeNiveles = tablaDeNivelesParam;
 	}
 	/**
 	 * Método void que aumenta la energía.
@@ -955,11 +972,13 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * Actualiza la salud y la energía del personaje en batalla.
 	 * @param map contenedor de los atributos a actualizar.
 	 */
-	public final void actualizarAtributos(final HashMap<String, Number> map) {
+	public final void actualizarAtributos(
+			final HashMap<String, Number> map) {
 		salud = map.get("salud").intValue();
 		energia = map.get("energia").intValue();
 		defensa = map.get("defensa").intValue();
-		casta.setProbabilidadEvitarDaño(map.get("probEvitarDanio").doubleValue());
+		casta.setProbabilidadEvitarDaño(
+				map.get("probEvitarDanio").doubleValue());
 	}
 	/**
 	 * Método que realiza el trueque de items.
@@ -968,13 +987,15 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * @param aSacar items a eliminar.
 	 */
 	public void trueque(final ArrayList<Item> misItems,
-			final ArrayList<Item> aPoner, final DefaultListModel<String> aSacar) {
+			final ArrayList<Item> aPoner,
+			final DefaultListModel<String> aSacar) {
 		int j = 0;
 		boolean loop = true;
 		ArrayList<Item> aux = misItems;
 		while (aSacar.size() > 0) {
 			while (loop) {
-				if (misItems.get(j).getNombre().equals(aSacar.get(0))) {
+				if (misItems.get(j).getNombre().
+						equals(aSacar.get(0))) {
 					aSacar.remove(0);
 					aux.remove(misItems.get(j));
 					loop = false;

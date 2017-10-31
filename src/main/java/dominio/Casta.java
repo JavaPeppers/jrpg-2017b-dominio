@@ -60,7 +60,8 @@ public abstract class Casta implements Serializable {
 	 * @param danioCrit Valor por el cual será
 	 * multiplicado el golpe básico
 	 */
-	public Casta(final double probCrit, final double evasion, final double danioCrit) {
+	public Casta(final double probCrit,
+			final double evasion, final double danioCrit) {
 		this.probabilidadGolpeCritico = probCrit;
 		this.probabilidadEvitarDaño = evasion;
 		this.dañoCritico = danioCrit;
@@ -129,11 +130,12 @@ public abstract class Casta implements Serializable {
 	/** Método void que sobreescribe el atributo
 	 * probabilidadGolpeCritico.
 	 * con el valor que se ingresa por parámetro.
-	 * @param probabilidadGolpeCritico Valor
-	 * que tendra probabilidadGolpeCritico
+	 * @param probabilidadGolpeCriticoParam Valor
+	 * que tendra probabilidadGolpeCriticoParam
 	 */
-	public final void setProbabilidadGolpeCritico(final double probabilidadGolpeCritico) {
-		this.probabilidadGolpeCritico = probabilidadGolpeCritico;
+	public final void setProbabilidadGolpeCritico(
+			final double probabilidadGolpeCriticoParam) {
+		this.probabilidadGolpeCritico = probabilidadGolpeCriticoParam;
 	}
 	/** Método que devuelve la probabilidadEvitarDaño.
 	 * @return probabilidadEvitarDaño
@@ -144,11 +146,12 @@ public abstract class Casta implements Serializable {
 	/** Método void que sobreescribe el atributo
 	 * probabilidadEvitarDaño.
 	 * con el valor que se ingresa por parámetro.
-	 * @param probabilidadEvitarDanio Valor que
+	 * @param probabilidadEvitarDanioParam Valor que
 	 * tendra probabilidadEvitarDaño.
 	 */
-	public final void setProbabilidadEvitarDaño(final double probabilidadEvitarDanio) {
-		this.probabilidadEvitarDaño = probabilidadEvitarDanio;
+	public final void setProbabilidadEvitarDaño(
+			final double probabilidadEvitarDanioParam) {
+		this.probabilidadEvitarDaño = probabilidadEvitarDanioParam;
 	}
 	/** Método que devuelve el dañoCritico.
 	 * @return dañoCritico
@@ -159,10 +162,11 @@ public abstract class Casta implements Serializable {
 	/** Método void que sobreescribe el atributo
 	 * dañoCritico.
 	 * con el valor que se ingresa por parámetro.
-	 * @param danioCritico Valor que tendra dañoCritico
+	 * @param danioCriticoParam Valor que tendra dañoCritico
 	 */
-	public final void setDañoCritico(final double danioCritico) {
-		this.dañoCritico = danioCritico;
+	public final void setDañoCritico(
+			final double danioCriticoParam) {
+		this.dañoCritico = danioCriticoParam;
 	}
 	/** Método void que aumenta el atributo
 	 * probabilidadEvitarDaño.

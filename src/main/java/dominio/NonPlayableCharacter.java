@@ -76,7 +76,8 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 * @param dificultadNPC Valor entero
 	 * que produce una variación en los atributos.
 	 */
-	public NonPlayableCharacter(final String nombre, final int nivel, final int dificultadNPC) {
+	public NonPlayableCharacter(final String nombre,
+			final int nivel, final int dificultadNPC) {
 		super(0, 0, nivel, nombre);
 
 		int dificultad;
@@ -86,11 +87,15 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 			dificultad = dificultadNPC;
 		}
 
-		this.aumentarFuerza(MODIFICADORBASEF * (dificultad + 1) +
-				(nivel - 1) * MULTIPLICADORF * (dificultad + 1));
-		this.salud = MODIFICADORBASES * (dificultad + 1) + (nivel - 1) * MULTIPLICADORS * (dificultad + 1);
-		this.aumentarDefensa(MODIFICADORBASED * (dificultad + 1) +
-				(nivel - 1) * MULTIPLICADORD * (dificultad + 1));
+		this.aumentarFuerza(MODIFICADORBASEF * (dificultad + 1)
+				+ (nivel - 1) * MULTIPLICADORF
+				* (dificultad + 1));
+		this.salud = MODIFICADORBASES * (dificultad + 1)
+				+ (nivel - 1) * MULTIPLICADORS
+				* (dificultad + 1);
+		this.aumentarDefensa(MODIFICADORBASED * (dificultad + 1)
+				+ (nivel - 1) * MULTIPLICADORD
+				* (dificultad + 1));
 	}
 
 	/**
@@ -131,10 +136,10 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 
 	/**
 	 * Asigna un valor entero que representará la salud del NPC.
-	 * @param salud Entero que indica la nueva salud del NPC.
+	 * @param saludParam Entero que indica la nueva salud del NPC.
 	 */
-	public final void setSalud(final int salud) {
-		this.salud = salud;
+	public final void setSalud(final int saludParam) {
+		this.salud = saludParam;
 	}
 
 	/**
@@ -148,7 +153,9 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	@Override
 	public final int atacar(final Peleable atacado) {
 		if (this.getRandom().nextDouble() <= NUMEROPARAATACAR) {
-			return atacado.serAtacado((int) (this.getAtaque() * MULTIPLICADORFUERZA));
+			return atacado.serAtacado((int)
+					(this.getAtaque()
+							* MULTIPLICADORFUERZA));
 		} else {
 			return atacado.serAtacado(this.getAtaque());
 		}

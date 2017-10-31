@@ -1,9 +1,9 @@
 package dominio;
 /**
- * Clase que se utiliza para generar números randoms
+ * Clase que se utiliza para generar números randoms.
  */
 public  class RandomGenerator {
-	/**
+	/**.
 	 * Método que siempre retorna 0.
 	 * Será sobreescrito por las clases que heredan.
 	 * @param val No se usa

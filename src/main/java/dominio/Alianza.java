@@ -17,10 +17,10 @@ public class Alianza {
 
 	/**La clase Alianza tiene como función agrupar a los jugadores.
 	 * mediante una LinkedList de Personajes
-	 * @param nombre Nombre que se le dará a la alianza
+	 * @param nombreParam Nombre que se le dará a la alianza
 	 */
-	public Alianza(final String nombre) {
-		this.nombre = nombre;
+	public Alianza(final String nombreParam) {
+		this.nombre = nombreParam;
 		this.aliados = new LinkedList<Personaje>();
 	}
 	/** Se encarga de retornar la lista.

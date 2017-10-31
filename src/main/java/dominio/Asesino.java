@@ -12,6 +12,9 @@ package dominio;
  */
 
 public class Asesino extends Casta {
+
+	/** The Constant CEROPUNTOCINCO. */
+	private static final double CEROPUNTOCINCO = 0.5;
 	/**
 	 * Energia minima necesario para realizar una habilidad.
 	 */
@@ -44,7 +47,8 @@ public class Asesino extends Casta {
 	 * multiplicado el golpe básico
 	 */
 
-public Asesino(final double probCrit, final double evasion, final double danioCrit) {
+public Asesino(final double probCrit, final double evasion,
+		final double danioCrit) {
 	super(probCrit, evasion, danioCrit);
 }
 	/** El constructor por defecto, llama al constructor por defecto.
@@ -79,10 +83,14 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	 * con éxito o no.
 	 */
 	@Override
-	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad1(final Personaje caster,
+			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado((int) (caster.getAtaque() * caster.getCasta().getDañoCritico())) > 0) {
+			if (atacado.serAtacado((int) (caster.getAtaque()
+				* caster.getCasta().getDañoCritico()))
+				> 0) {
+
 				return true;
 			}
 		}
@@ -109,10 +117,12 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	 * con éxito o no.
 	 */
 	@Override
-	public final boolean habilidad2(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad2(final Personaje caster,
+			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (this.getProbabilidadEvitarDaño() + AUMENTARPROBEVITAR < 0.5) {
+			if (this.getProbabilidadEvitarDaño()
+					+ AUMENTARPROBEVITAR < CEROPUNTOCINCO) {
 				this.aumentarEvitarDaño(AUMENTARPROBEVITAR);
 			} else {
 				this.setProbabilidadEvitarDaño(PROBEVITARDANIO);
@@ -128,7 +138,8 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	 * @return Retorna falso.
 	 */
 	@Override
-	public final boolean habilidad3(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad3(final Personaje caster,
+			final Peleable atacado) {
 		return false;
 	}
 	/** Retorna un entero.
@@ -172,7 +183,8 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	 */
 	@Override
 	public final String[] getHabilidadesCasta() {
-		return new String[] {"Golpe Critico", "Aumentar Evasion", "Robar"};
+		return new String[] {"Golpe Critico",
+				"Aumentar Evasion", "Robar"};
 	}
 
 }

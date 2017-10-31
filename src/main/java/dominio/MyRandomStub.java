@@ -8,17 +8,18 @@ public class MyRandomStub extends RandomGenerator {
 	 */
 	private final double valDouble;
 	/**
-	 * Valor que devolverá nextInt();
+	 * Valor que devolverá nextInt().
 	 */
 	private final int valInt;
 	/**
 	 * Constructor del MyRandomStub.
-	 * @param valDouble Double que se fijará en el objeto.
-	 * @param valInt Entero que se fijará en el objeto.
+	 * @param valDoubleParam Double que se fijará en el objeto.
+	 * @param valIntParam Entero que se fijará en el objeto.
 	 */
-	public MyRandomStub(final double valDouble, final int valInt) {
-		this.valDouble = valDouble;
-		this.valInt = valInt;
+	public MyRandomStub(final double valDoubleParam,
+			final int valIntParam) {
+		this.valDouble = valDoubleParam;
+		this.valInt = valIntParam;
 	}
 	/**
 	 * Método que retorna el valor entero que se pasa en el constructor.

@@ -7,37 +7,77 @@ import dominio.Guerrero;
 import dominio.Humano;
 import dominio.Personaje;
 
+
+/**
+ * The Class TestAsignarPuntos se usa para testear el asignar puntos.
+ */
 public class TestAsignarPuntos {
 
+	/** The Constant TOPE. */
+	private static final int TOPE = 199;
+
+	/** The Constant INTELIGENCIA. */
+	private static final int INTELIGENCIA = 189;
+
+	/** The Constant DESTREZA. */
+	private static final int DESTREZA = 189;
+
+	/** The Constant FUERZA. */
+	private static final int FUERZA = 184;
+
+	/** The Constant ENERGIA_TOPE2. */
+	private static final int ENERGIA_TOPE2 = 125;
+
+	/** The Constant ENERGIA_TOPE1. */
+	private static final int ENERGIA_TOPE1 = 105;
+
+	/** The Constant EXP. */
+	private static final int EXP = 50;
+
+	/** The Constant SALUD_TOPE2. */
+	private static final int SALUD_TOPE2 = 130;
+
+	/** The Constant SALUD_TOPE1. */
+	private static final int SALUD_TOPE1 = 105;
+
+	/**
+	 * Test aumentar salud tope.
+	 */
 	@Test
-	public void testAumentarSalud_tope(){
+	public void testAumentarSaludTope() {
 		Personaje.cargarTablaNivel();
 
-		Humano h = new Humano("Nicolas",new Guerrero(),1);
-		Assert.assertEquals(105,h.getSaludTope());
-		h.ganarExperiencia(50);
-		Assert.assertEquals(130,h.getSaludTope());
-		}
-	
-	@Test
-	public void testAumentarEnergia_tope(){
-		Personaje.cargarTablaNivel();
-
-		Humano h = new Humano("Nicolas",new Guerrero(),1);
-		Assert.assertEquals(105,h.getEnergiaTope());
-		h.ganarExperiencia(50);
-		Assert.assertEquals(125,h.getEnergiaTope());
+		Humano h = new Humano("Nicolas", new Guerrero(), 1);
+		Assert.assertEquals(SALUD_TOPE1, h.getSaludTope());
+		h.ganarExperiencia(EXP);
+		Assert.assertEquals(SALUD_TOPE2, h.getSaludTope());
 	}
-	
+
+	/**
+	 * Test aumentar energia tope.
+	 */
 	@Test
-	public void testMasDe200Puntos(){
-		Humano h = new Humano("Nicolas",new Guerrero(),1);
-		h.aumentarFuerza(184);
-		h.aumentarDestreza(189);
-		h.aumentarInteligencia(189);
+	public void testAumentarEnergiaTope() {
+		Personaje.cargarTablaNivel();
+
+		Humano h = new Humano("Nicolas", new Guerrero(), 1);
+		Assert.assertEquals(ENERGIA_TOPE1, h.getEnergiaTope());
+		h.ganarExperiencia(EXP);
+		Assert.assertEquals(ENERGIA_TOPE2, h.getEnergiaTope());
+	}
+
+	/**
+	 * Test mas de 200 puntos.
+	 */
+	@Test
+	public void testMasDe200Puntos() {
+		Humano h = new Humano("Nicolas", new Guerrero(), 1);
+		h.aumentarFuerza(FUERZA);
+		h.aumentarDestreza(DESTREZA);
+		h.aumentarInteligencia(INTELIGENCIA);
 		h.AsignarPuntosSkills(2, 2, 2);
-		Assert.assertEquals(199,h.getFuerza());
-		Assert.assertEquals(199,h.getDestreza());
-		Assert.assertEquals(199,h.getInteligencia());
+		Assert.assertEquals(TOPE, h.getFuerza());
+		Assert.assertEquals(TOPE, h.getDestreza());
+		Assert.assertEquals(TOPE, h.getInteligencia());
 	}
 }

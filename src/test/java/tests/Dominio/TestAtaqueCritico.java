@@ -3,13 +3,25 @@ package tests.Dominio;
 import org.junit.Assert;
 import org.junit.Test;
 
-import dominio.*;
+import dominio.Guerrero;
+import dominio.Humano;
 
+
+/**
+ * The Class TestAtaqueCritico se utiliza para testear el ataque critico.
+ */
 public class TestAtaqueCritico {
 
+	/** The Constant GOLPE_CRIT. */
+	private static final double GOLPE_CRIT = 1.5;
+
+	/**
+	 * Testgolpe crit.
+	 */
 	@Test
-	public void testgolpeCrit(){
-		Humano h = new Humano("Nicolas",new Guerrero(),1);
-		Assert.assertEquals(h.getAtaque()*1.5, h.golpe_critico(), 1);
+	public void testgolpeCrit() {
+		Humano h = new Humano("Nicolas", new Guerrero(), 1);
+		Assert.assertEquals(h.getAtaque() * GOLPE_CRIT,
+				h.golpeCritico(), 1);
 	}
 }

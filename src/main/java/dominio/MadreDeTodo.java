@@ -30,6 +30,7 @@ public abstract class MadreDeTodo {
 	 */
 	private RandomGenerator random;
 
+	/** Array list donde se almacenaran los items. */
 	protected ArrayList<Item> items = new ArrayList<Item>();
 
 
@@ -38,20 +39,21 @@ public abstract class MadreDeTodo {
 	 * Que tiene como
 	 * funcion tener los atributos que
 	 * comparten las clases NPC y Personaje
-	 * @param fuerza valor otorgado por
+	 * @param fuerzaParam valor otorgado por
 	 * el constructor de NPC o Personaje.
-	 * @param defensa valor otorgado por
+	 * @param defensaParam valor otorgado por
 	 * el constructor de NPC o Personaje.
-	 * @param nivel valor otorgado por
+	 * @param nivelParam valor otorgado por
 	 * el constructor de NPC o Personaje.
-	 * @param nombre valor otorgado por
+	 * @param nombreParam valor otorgado por
 	 * el constructor de NPC o Personaje.
 	 */
-	public MadreDeTodo(final int fuerza, final int defensa, final int nivel, final String nombre) {
-		this.fuerza = fuerza;
-		this.defensa = defensa;
-		this.nivel = nivel;
-		this.nombre = nombre;
+	public MadreDeTodo(final int fuerzaParam, final int defensaParam,
+			final int nivelParam, final String nombreParam) {
+		this.fuerza = fuerzaParam;
+		this.defensa = defensaParam;
+		this.nivel = nivelParam;
+		this.nombre = nombreParam;
 		this.random = new MyRandom();
 	}
 
@@ -85,10 +87,10 @@ public abstract class MadreDeTodo {
 	}
 	/** Método void que sobreescribe el atributo nombre.
 	 * Con el valor que se ingresa por parámetro.
-	 * @param nombre valor a sobreescribir
+	 * @param nombreParam valor a sobreescribir
 	 */
-	public final void setNombre(final String nombre) {
-		this.nombre = nombre;
+	public final void setNombre(final String nombreParam) {
+		this.nombre = nombreParam;
 	}
 	/** Método void que aumenta la fuerza del personaje o NPC.
 	 * Con el valor que se ingresa por parámetro.
@@ -113,10 +115,10 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Setter del Randomizador.
-	 * @param random Randomizador que reemplazará al actual.
+	 * @param randomParam Randomizador que reemplazará al actual.
 	 */
-	public final void setRandom(final RandomGenerator random) {
-		this.random = random;
+	public final void setRandom(final RandomGenerator randomParam) {
+		this.random = randomParam;
 	}
 	/**
 	 * Aumenta la defensa del personaje / npc.
