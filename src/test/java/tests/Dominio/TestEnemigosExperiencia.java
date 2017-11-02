@@ -11,26 +11,27 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestEnemigosExperiencia.
+ * Clase para Testear Experiencia obtenida luego 
+ * de batallar contra Enemigos.
  */
 public class TestEnemigosExperiencia {
 
-	/** The Constant EXP3. */
+	/** Constante EXP3. */
 	private static final int EXP3 = 40;
 
-	/** The Constant EXP2. */
+	/** Constante EXP2. */
 	private static final int EXP2 = 60;
 
-	/** The Constant EXP1. */
+	/** Constante EXP1. */
 	private static final int EXP1 = 30;
 
-	/** The Constant EXP. */
+	/** Constante EXP. */
 	private static final int EXP = 30;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

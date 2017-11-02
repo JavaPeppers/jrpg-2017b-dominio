@@ -10,17 +10,17 @@ import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
 /**
- * The Class TestNPCNuevo.
+ * Clase para Testear NPC Nuevo.
  */
 public class TestNPCNuevo {
 
-	/** The Constant VAL_DOUBLE2. */
+	/** Constante VAL_DOUBLE2. */
 	private static final double VAL_DOUBLE2 = 0.1;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE1. */
+	/** Constante VAL_DOUBLE1. */
 	private static final double VAL_DOUBLE1 = 0.49;
 
 	/**

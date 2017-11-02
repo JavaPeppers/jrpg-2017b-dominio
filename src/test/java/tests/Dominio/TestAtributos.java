@@ -9,29 +9,29 @@ import dominio.Humano;
 
 
 /**
- * The Class TestAtributos se usa para testear los atributos.
+ * Clase TestAtributos se usa para testear los atributos.
  */
 public class TestAtributos {
 
-	/** The Constant INCREMENTO. */
+	/** Constante INCREMENTO. */
 	private static final int INCREMENTO = 10;
 
-	/** The Constant INTELIG_FIN. */
+	/** Constante INTELIG_FIN. */
 	private static final int INTELIG_FIN = 20;
 
-	/** The Constant INTELIG_INI. */
+	/** Constante INTELIG_INI. */
 	private static final int INTELIG_INI = INCREMENTO;
 
-	/** The Constant DESTREZA_FIN. */
+	/** Constante DESTREZA_FIN. */
 	private static final int DESTREZA_FIN = 20;
 
-	/** The Constant DESTREZA_INI. */
+	/** Constante DESTREZA_INI. */
 	private static final int DESTREZA_INI = INCREMENTO;
 
-	/** The Constant FUERZA_FIN. */
+	/** Constante FUERZA_FIN. */
 	private static final int FUERZA_FIN = 25;
 
-	/** The Constant FUERZA_INI. */
+	/** Constante FUERZA_INI. */
 	private static final int FUERZA_INI = 15;
 
 	/**

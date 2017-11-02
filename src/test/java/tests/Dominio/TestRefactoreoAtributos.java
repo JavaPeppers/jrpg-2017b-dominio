@@ -13,32 +13,32 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestRefactoreoAtributos.
+ * Clase para Testear Refactorar Atributos.
  */
 public class TestRefactoreoAtributos {
 
-	/** The Constant TOPE2_ELFO. */
+	/** Constante TOPE2_ELFO. */
 	private static final int TOPE2_ELFO = 110;
 
-	/** The Constant TOPE1_ELFO. */
+	/** Constante TOPE1_ELFO. */
 	private static final int TOPE1_ELFO = 100;
 
-	/** The Constant TOPE2_ORCO. */
+	/** Constante TOPE2_ORCO. */
 	private static final int TOPE2_ORCO = 100;
 
-	/** The Constant TOPE1_ORCO. */
+	/** Constante TOPE1_ORCO. */
 	private static final int TOPE1_ORCO = 110;
 
-	/** The Constant TOPE_HUMANO. */
+	/** Constante TOPE_HUMANO. */
 	private static final int TOPE_HUMANO = 105;
 
-	/** The Constant INTELIG_HECHICERO. */
+	/** Constante INTELIG_HECHICERO. */
 	private static final int INTELIG_HECHICERO = 15;
 
-	/** The Constant FUERZA_GUERRERO. */
+	/** Constante FUERZA_GUERRERO. */
 	private static final int FUERZA_GUERRERO = 15;
 
-	/** The Constant DEST_ASESINO. */
+	/** Constante DEST_ASESINO. */
 	private static final int DEST_ASESINO = 15;
 
 	/**

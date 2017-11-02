@@ -12,20 +12,20 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestHechieroNuevo.
+ * Clase para Testear Hechiero Nuevo.
  */
 public class TestHechieroNuevo {
 
-	/** The Constant BONUS_INTELIG. */
+	/** Constante BONUS_INTELIG. */
 	private static final int BONUS_INTELIG = -20;
 
-	/** The Constant BONUS_ENERGIA. */
+	/** Constante BONUS_ENERGIA. */
 	private static final int BONUS_ENERGIA = -100;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

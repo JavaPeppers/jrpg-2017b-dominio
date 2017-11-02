@@ -15,7 +15,7 @@ import dominio.Item;
 import dominio.Personaje;
 
 /**
- * The Class TestTrueque.
+ * Clase para Testear el Trueque.
  */
 public class TestTrueque {
 

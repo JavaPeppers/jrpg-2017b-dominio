@@ -7,29 +7,29 @@ import dominio.Enemigo;
 
 
 /**
- * The Class TestEnemigo.
+ * Clase para testear al Enemigo.
  */
 public class TestEnemigo {
 
-	/** The Constant EXP. */
+	/** Constante EXP. */
 	private static final int EXP = 40;
 
-	/** The Constant VALOR_ATAQUE. */
+	/** Constante VALOR_ATAQUE. */
 	private static final int VALOR_ATAQUE = 45;
 
-	/** The Constant INCRE_ATAQUE. */
+	/** Constante INCRE_ATAQUE. */
 	private static final int INCRE_ATAQUE = 20;
 
-	/** The Constant SALUD_TOPE. */
+	/** Constante SALUD_TOPE. */
 	private static final int SALUD_TOPE = 60;
 
-	/** The Constant SALUD2. */
+	/** Constante SALUD2. */
 	private static final int SALUD2 = 35;
 
-	/** The Constant FUERZA. */
+	/** Constante FUERZA. */
 	private static final int FUERZA = 25;
 
-	/** The Constant SALUD. */
+	/** Constante SALUD. */
 	private static final int SALUD = 60;
 
 	/**

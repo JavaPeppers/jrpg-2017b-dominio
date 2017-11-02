@@ -6,7 +6,7 @@ import org.junit.Test;
 import dominio.Alianza;
 
 /**
- * The Class TestAlianzaNuevo se utiliza para testear las alianzas.
+ * Clase TestAlianzaNuevo se utiliza para testear las alianzas.
  */
 public class TestAlianzaNuevo {
 

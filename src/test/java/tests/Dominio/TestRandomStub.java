@@ -7,11 +7,11 @@ import dominio.MyRandomStub;
 import dominio.RandomGenerator;
 
 /**
- * The Class testRandomStub.
+ * Clase para testear RandomStub.
  */
 public class TestRandomStub {
 
-	/** The Constant TRES. */
+	/** Constante TRES. */
 	private static final int TRES = 3;
 
 	/**

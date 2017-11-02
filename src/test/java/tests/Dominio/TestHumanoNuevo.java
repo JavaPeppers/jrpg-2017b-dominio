@@ -9,23 +9,23 @@ import dominio.MyRandomStub;
 import dominio.Personaje;
 
 /**
- * The Class TestHumanoNuevo.
+ * Clase para testear Humano Nuevo.
  */
 public class TestHumanoNuevo {
 
-	/** The Constant TEST_ENERGIA2. */
+	/** Constante TEST_ENERGIA2. */
 	private static final int TEST_ENERGIA2 = 95;
 
-	/** The Constant TEST_ENERGIA1. */
+	/** Constante TEST_ENERGIA1. */
 	private static final int TEST_ENERGIA1 = 105;
 
-	/** The Constant BONUS_ENERGIA. */
+	/** Constante BONUS_ENERGIA. */
 	private static final int BONUS_ENERGIA = -100;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

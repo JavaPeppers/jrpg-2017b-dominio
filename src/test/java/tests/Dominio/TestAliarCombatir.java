@@ -11,18 +11,18 @@ import dominio.MyRandomStub;
 
 
 /**
- * The Class TestAliarCombatir se usa para testear
+ *  Clase TestAliarCombatir se usa para testear
  *  y combatir con alianzas.
  */
 public class TestAliarCombatir {
 
-	/** The Constant SALUD_TEST. */
+	/**  Constante SALUD_TEST. */
 	private static final int SALUD_TEST = 105;
 
-	/** The Constant VAL_INT. */
+	/**  Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/**  Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

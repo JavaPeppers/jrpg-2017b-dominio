@@ -10,53 +10,53 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 
 /**
- * The Class TestHechicero.
+ * Clase para testear al hechicero.
  */
 public class TestHechicero {
 
-	/** The Constant BONUS_SALUD. */
+	/** Constante BONUS_SALUD. */
 	private static final int BONUS_SALUD = 35;
 
-	/** The Constant BONUS_ENERGIA. */
+	/** Constante BONUS_ENERGIA. */
 	private static final int BONUS_ENERGIA = -55;
 
-	/** The Constant SALUD_TEST. */
+	/** Constante SALUD_TEST. */
 	private static final int SALUD_TEST = 65;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
-	/** The Constant CINCUENTA. */
+	/** Constante CINCUENTA. */
 	private static final int CINCUENTA = 50;
 
-	/** The Constant FUERZA_ELFO. */
+	/** Constante FUERZA_ELFO. */
 	private static final int FUERZA_ELFO = 25;
 
-	/** The Constant NIVEL. */
+	/** Constante NIVEL. */
 	private static final int NIVEL = VAL_INT;
 
-	/** The Constant DANIO_CRIT. */
+	/** Constante DANIO_CRIT. */
 	private static final double DANIO_CRIT = 1.5;
 
-	/** The Constant EVASION. */
+	/** Constante EVASION. */
 	private static final double EVASION = 0.3;
 
-	/** The Constant PROB_CRIT. */
+	/** Constante PROB_CRIT. */
 	private static final double PROB_CRIT = 0.2;
 
-	/** The Constant FUERZA_HUM. */
+	/** Constante FUERZA_HUM. */
 	private static final int FUERZA_HUM = 55;
 
-	/** The Constant INTELIG. */
+	/** Constante INTELIG. */
 	private static final int INTELIG = 30;
 
-	/** The Constant DESTREZA. */
+	/** Constante DESTREZA. */
 	private static final int DESTREZA = 20;
 
-	/** The Constant CIEN. */
+	/** Constante CIEN. */
 	private static final int CIEN = 100;
 
 	/**

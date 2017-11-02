@@ -10,41 +10,41 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 
 /**
- * The Class TestGuerrero.
+ * Clase para Testear Guerrero.
  */
 public class TestGuerrero {
 
-	/** The Constant DEF. */
+	/** Constante DEF. */
 	private static final int DEF = 65;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
-	/** The Constant NIVEL. */
+	/** Constante NIVEL. */
 	private static final int NIVEL = VAL_INT;
 
-	/** The Constant DANIO_CRIT. */
+	/** Constante DANIO_CRIT. */
 	private static final double DANIO_CRIT = 1.5;
 
-	/** The Constant EVASION. */
+	/** Constante EVASION. */
 	private static final double EVASION = 0.3;
 
-	/** The Constant PROB_CRIT. */
+	/** Constante PROB_CRIT. */
 	private static final double PROB_CRIT = 0.2;
 
-	/** The Constant INTELIGENCIA. */
+	/** Constante INTELIGENCIA. */
 	private static final int INTELIGENCIA = 30;
 
-	/** The Constant DESTREZA. */
+	/** Constante DESTREZA. */
 	private static final int DESTREZA = 20;
 
-	/** The Constant FUERZA. */
+	/** Constante FUERZA. */
 	private static final int FUERZA = 25;
 
-	/** The Constant CIEN. */
+	/** Constante CIEN. */
 	private static final int CIEN = 100;
 
 	/**

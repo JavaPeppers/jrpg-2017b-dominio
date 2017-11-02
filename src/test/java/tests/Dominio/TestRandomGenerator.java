@@ -7,11 +7,11 @@ import dominio.RandomGenerator;
 
 
 /**
- * The Class TestRandomGenerator.
+ * Clase para Testear RandomGenerator.
  */
 public class TestRandomGenerator {
 
-    /** The Constant RANDOM_INT. */
+    /** Constante RANDOM_INT. */
     private static final int RANDOM_INT = 3;
 
     /**

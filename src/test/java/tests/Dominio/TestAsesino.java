@@ -15,67 +15,67 @@ import dominio.MyRandomStub;
  */
 public class TestAsesino {
 
-	/** The Constant DELTA3. */
+	/** Constante DELTA3. */
 	private static final double DELTA3 = 0.1;
 
-	/** The Constant EXPECTED3. */
+	/** Constante EXPECTED3. */
 	private static final double EXPECTED3 = 0.5;
 
-	/** The Constant DELTA2. */
+	/** Constante DELTA2. */
 	private static final double DELTA2 = 0.01;
 
-	/** The Constant EXPECTED2. */
+	/** Constante EXPECTED2. */
 	private static final double EXPECTED2 = 0.45;
 
-	/** The Constant DELTA1. */
+	/** Constante DELTA1. */
 	private static final double DELTA1 = 0.1;
 
-	/** The Constant EXPECTED1. */
+	/** Constante EXPECTED1. */
 	private static final double EXPECTED1 = 0.3;
 
-	/** The Constant ID. */
+	/** Constante ID. */
 	private static final int ID = 1;
 
-	/** The Constant NIVEL. */
+	/** Constante NIVEL. */
 	private static final int NIVEL = 1;
 
-	/** The Constant EXP. */
+	/** Constante EXP. */
 	private static final int EXP = 0;
 
-	/** The Constant DANIO_CRIT. */
+	/** Constante DANIO_CRIT. */
 	private static final double DANIO_CRIT = 1.5;
 
-	/** The Constant EVASION. */
+	/** Constante EVASION. */
 	private static final double EVASION = 0.3;
 
-	/** The Constant PROB_CRIT. */
+	/** Constante PROB_CRIT. */
 	private static final double PROB_CRIT = 0.2;
 
-	/** The Constant INTELIGENCIA. */
+	/** Constante INTELIGENCIA. */
 	private static final int INTELIGENCIA = 30;
 
-	/** The Constant DESTREZA. */
+	/** Constante DESTREZA. */
 	private static final int DESTREZA = 20;
 
-	/** The Constant FUERZA. */
+	/** Constante FUERZA. */
 	private static final int FUERZA = 25;
 
-	/** The Constant ENERGIA. */
+	/** Constante ENERGIA. */
 	private static final int ENERGIA = 100;
 
-	/** The Constant SALUD. */
+	/** Constante SALUD. */
 	private static final int SALUD = 100;
 
-	/** The Constant SALUD_TEST2. */
+	/** Constante SALUD_TEST2. */
 	private static final int SALUD_TEST2 = 93;
 
-	/** The Constant SALUD_TEST1. */
+	/** Constante SALUD_TEST1. */
 	private static final int SALUD_TEST1 = 105;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

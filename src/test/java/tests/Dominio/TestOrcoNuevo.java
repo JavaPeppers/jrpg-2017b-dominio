@@ -11,20 +11,20 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestOrcoNuevo.
+ * Clase para Testear Orco Nuevo.
  */
 public class TestOrcoNuevo {
 
-	/** The Constant BONUS_FUERZA. */
+	/** Constante BONUS_FUERZA. */
 	private static final int BONUS_FUERZA = -10;
 
-	/** The Constant BONUS_ENERGIA. */
+	/** Constante BONUS_ENERGIA. */
 	private static final int BONUS_ENERGIA = -100;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

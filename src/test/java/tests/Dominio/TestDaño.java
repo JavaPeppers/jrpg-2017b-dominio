@@ -10,38 +10,38 @@ import dominio.Orco;
 
 
 /**
- * The Class TestDaño.
+ * Clase TestDaño se usa para testear daños.
  */
 public class TestDaño {
 
-	/** The Constant DANIO_CRIT. */
+	/** Constante DANIO_CRIT. */
 	private static final double DANIO_CRIT = 1.5;
 
-	/** The Constant EVASION. */
+	/** Constante EVASION. */
 	private static final double EVASION = 0.3;
 
-	/** The Constant PROB_CRIT. */
+	/** Constante PROB_CRIT. */
 	private static final double PROB_CRIT = 0.2;
 
-	/** The Constant DEST_HUM2. */
+	/** Constante DEST_HUM2. */
 	private static final int DEST_HUM2 = 25;
 
-	/** The Constant DEST_HUM1. */
+	/** Constante DEST_HUM1. */
 	private static final int DEST_HUM1 = 20;
 
-	/** The Constant DEST_ORCO. */
+	/** Constante DEST_ORCO. */
 	private static final int DEST_ORCO = 15;
 
-	/** The Constant INTELIG. */
+	/** Constante INTELIG. */
 	private static final int INTELIG = 30;
 
-	/** The Constant CIEN. */
+	/** Constante CIEN. */
 	private static final int CIEN = 100;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

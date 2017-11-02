@@ -12,62 +12,62 @@ import dominio.Orco;
 
 
 /**
- * The Class TestPersonaje se usa para testear a cada personaje.
+ * La clase TestPersonaje se usa para testear a cada personaje.
  */
 public class TestPersonaje {
 
-	/** The Constant ID_HUMANO. */
+	/** Constante ID_HUMANO. */
 	private static final int ID_HUMANO = 3;
 
-	/** The Constant ID_ORCO. */
+	/** Constante ID_ORCO. */
 	private static final int ID_ORCO = 3;
 
-	/** The Constant ID_ELFO. */
+	/** Constante ID_ELFO. */
 	private static final int ID_ELFO = 3;
 
-	/** The Constant ENERGIA_ORCO. */
+	/** Constante ENERGIA_ORCO. */
 	private static final int ENERGIA_ORCO = 100;
 
-	/** The Constant SALUD_ORCO. */
+	/** Constante SALUD_ORCO. */
 	private static final int SALUD_ORCO = 110;
 
-	/** The Constant ENERGIA_ELFO. */
+	/** Constante ENERGIA_ELFO. */
 	private static final int ENERGIA_ELFO = 110;
 
-	/** The Constant SALUD_ELFO. */
+	/** Constante SALUD_ELFO. */
 	private static final int SALUD_ELFO = 100;
 
-	/** The Constant INTELIG_ASESINO. */
+	/** Constante INTELIG_ASESINO. */
 	private static final int INTELIG_ASESINO = 10;
 
-	/** The Constant DESTREZA_ASESINO. */
+	/** Constante DESTREZA_ASESINO. */
 	private static final int DESTREZA_ASESINO = 15;
 
-	/** The Constant FUERZA_ASESINO. */
+	/** Constante FUERZA_ASESINO. */
 	private static final int FUERZA_ASESINO = 10;
 
-	/** The Constant INTELIG_HECHICERO. */
+	/** Constante INTELIG_HECHICERO. */
 	private static final int INTELIG_HECHICERO = 15;
 
-	/** The Constant DESTREZA_HECHICERO. */
+	/** Constante DESTREZA_HECHICERO. */
 	private static final int DESTREZA_HECHICERO = 10;
 
-	/** The Constant FUERZA_HECHICERO. */
+	/** Constante FUERZA_HECHICERO. */
 	private static final int FUERZA_HECHICERO = 10;
 
-	/** The Constant INTELIGENCIA_GUERRERO. */
+	/** Constante INTELIGENCIA_GUERRERO. */
 	private static final int INTELIGENCIA_GUERRERO = 10;
 
-	/** The Constant DESTREZA_GUERRERO. */
+	/** Constante DESTREZA_GUERRERO. */
 	private static final int DESTREZA_GUERRERO = 10;
 
-	/** The Constant FUERZA_GUERRERO. */
+	/** Constante FUERZA_GUERRERO. */
 	private static final int FUERZA_GUERRERO = 15;
 
-	/** The Constant ENERGIA_HUMANO. */
+	/** Constante ENERGIA_HUMANO. */
 	private static final int ENERGIA_HUMANO = 105;
 
-	/** The Constant SALUD_HUMANO. */
+	/** Constante SALUD_HUMANO. */
 	private static final int SALUD_HUMANO = 105;
 
 	/**

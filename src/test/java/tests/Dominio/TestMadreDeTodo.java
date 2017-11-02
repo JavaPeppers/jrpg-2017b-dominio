@@ -8,7 +8,7 @@ import dominio.Humano;
 import dominio.Personaje;
 
 /**
- * The Class TestMadreDeTodo.
+ * Clase para testear MadreDeTodo.
  */
 public class TestMadreDeTodo {
 

@@ -11,17 +11,17 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestAsesinoNuevo Se usa para testear al asesino nuevo.
+ * Clase TestAsesinoNuevo Se usa para testear al asesino nuevo.
  */
 public class TestAsesinoNuevo {
 
-	/** The Constant ENERGIA_A_REDUCIR. */
+	/**  Constante ENERGIA_A_REDUCIR. */
 	private static final int ENERGIA_A_REDUCIR = 105;
 
-	/** The Constant VAL_INT. */
+	/**  Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/**  Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

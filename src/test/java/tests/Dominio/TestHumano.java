@@ -11,7 +11,7 @@ import dominio.MyRandomStub;
 
 
 /**
- * The Class TestHumano.
+ * Clase para Testear Humano.
  */
 public class TestHumano {
 

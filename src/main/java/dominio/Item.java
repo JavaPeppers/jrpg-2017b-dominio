@@ -13,34 +13,34 @@ import javax.imageio.ImageIO;
 
 public class Item implements Serializable {
 
-	/** The id item. */
+	/** id del item. */
 	private final int idItem;
 
-	/** The foto. */
+	/** foto del item */
 	private final String foto;
 
-	/** The nombre. */
+	/**  nombre del item */
 	private final String nombre;
 
-	/** The wear location. */
+	/**  ubicacion del item. */
 	private final int wearLocation;
 
-	/** The bonus salud. */
+	/** bonus salud que obtiene el personaje por poseer el item. */
 	private final int bonusSalud;
 
-	/** The bonus energia. */
+	/**  bonus energia que obtiene el personaje por poseer el item. */
 	private final int bonusEnergia;
 
-	/** The bonus fuerza. */
+	/**  bonus fuerza que obtiene el personaje por poseer el item.. */
 	private final int bonusFuerza;
 
-	/** The bonus destreza. */
+	/**  bonus destreza que obtiene el personaje por poseer el item.. */
 	private final int bonusDestreza;
 
-	/** The bonus inteligencia. */
+	/**  bonus inteligencia que obtiene el personaje por poseer el item.. */
 	private final int bonusInteligencia;
 
-	/** The foto equipado. */
+	/**  foto equipado . */
 	private final String fotoEquipado;
 	/**
 	 * Constructor del Item.

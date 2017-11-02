@@ -13,7 +13,7 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestPersonajeNuevo.
+ * Clase para Testear al Personaje Nuevo.
  */
 public class TestPersonajeNuevo {
 

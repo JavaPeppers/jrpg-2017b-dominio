@@ -12,17 +12,17 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestGuerreroNuevo.
+ * Clase para Testear Guerrero Nuevo.
  */
 public class TestGuerreroNuevo {
 
-	/** The Constant BONUS_ENERGIA. */
+	/** Constante BONUS_ENERGIA. */
 	private static final int BONUS_ENERGIA = -105;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

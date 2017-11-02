@@ -9,7 +9,7 @@ import dominio.Item;
 
 
 /**
- * The Class TestItems.
+ *  Clase para testear Ítems.
  */
 public class TestItems {
 

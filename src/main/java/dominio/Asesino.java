@@ -13,7 +13,7 @@ package dominio;
 
 public class Asesino extends Casta {
 
-	/** The Constant CEROPUNTOCINCO. */
+	/** Constante CEROPUNTOCINCO. */
 	private static final double CEROPUNTOCINCO = 0.5;
 	/**
 	 * Energia minima necesario para realizar una habilidad.

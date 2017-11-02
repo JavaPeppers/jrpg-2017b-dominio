@@ -3,7 +3,7 @@ package dominio;
 
 import java.io.Serializable;
 	/** Clase abstracta de la cual heredarán las
-	 * clases Asesion,Guerrero,Hechicero.
+	 * clases Asesino, Guerrero, Hechicero.
 	 * Posee dos contructores, el contructor
 	 * por defecto (no recibe argumentos),
 	 * pondrá los atributos con sus

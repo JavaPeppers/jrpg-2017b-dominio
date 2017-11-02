@@ -11,7 +11,7 @@ import dominio.MyRandomStub;
 import dominio.Orco;
 
 /**
- * The Class TestOrco.
+ * Clase para Testear Orco.
  */
 public class TestOrco {
 

@@ -8,23 +8,23 @@ import dominio.Humano;
 import dominio.Personaje;
 
 /**
- * The Class TestSubirNivel.
+ * Clase para Testear el Subir de Nivel.
  */
 public class TestSubirNivel {
 
-	/** The Constant NIVEL_3. */
+	/** Constante NIVEL_3. */
 	private static final int NIVEL_3 = 3;
 
-	/** The Constant EXP_150. */
+	/** Constante EXP_150. */
 	private static final int EXP_150 = 150;
 
-	/** The Constant NIVEL. */
+	/** Constante NIVEL. */
 	private static final int NIVEL = 100;
 
-	/** The Constant EXP_300_000. */
+	/** Constante EXP_300_000. */
 	private static final int EXP_300_000 = 300_000;
 
-	/** The Constant BONUS_EXP. */
+	/** Constante BONUS_EXP. */
 	private static final int BONUS_EXP = 50;
 
 	/**

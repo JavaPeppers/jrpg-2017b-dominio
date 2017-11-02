@@ -11,23 +11,23 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestElfoNuevo.
+ * Clase para testear al nuevo elfo.
  */
 public class TestElfoNuevo {
 
-	/** The Constant ENERGIA2. */
+	/** Constante ENERGIA2. */
 	private static final int ENERGIA2 = -100;
 
-	/** The Constant FUERZA. */
+	/** Constante FUERZA. */
 	private static final int FUERZA = -10;
 
-	/** The Constant ENERGIA. */
+	/** Constante ENERGIA. */
 	private static final int ENERGIA = -110;
 
-	/** The Constant VAL_INT. */
+	/** Constante VAL_INT. */
 	private static final int VAL_INT = 3;
 
-	/** The Constant VAL_DOUBLE. */
+	/** Constante VAL_DOUBLE. */
 	private static final double VAL_DOUBLE = 0.49;
 
 	/**

@@ -9,35 +9,35 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestAsignarPuntos se usa para testear el asignar puntos.
+ *  Clase TestAsignarPuntos se usa para testear el asignar puntos.
  */
 public class TestAsignarPuntos {
 
-	/** The Constant TOPE. */
+	/** Constante TOPE. */
 	private static final int TOPE = 199;
 
-	/** The Constant INTELIGENCIA. */
+	/** Constante INTELIGENCIA. */
 	private static final int INTELIGENCIA = 189;
 
-	/** The Constant DESTREZA. */
+	/** Constante DESTREZA. */
 	private static final int DESTREZA = 189;
 
-	/** The Constant FUERZA. */
+	/** Constante FUERZA. */
 	private static final int FUERZA = 184;
 
-	/** The Constant ENERGIA_TOPE2. */
+	/** Constante ENERGIA_TOPE2. */
 	private static final int ENERGIA_TOPE2 = 125;
 
-	/** The Constant ENERGIA_TOPE1. */
+	/** Constante ENERGIA_TOPE1. */
 	private static final int ENERGIA_TOPE1 = 105;
 
-	/** The Constant EXP. */
+	/** Constante EXP. */
 	private static final int EXP = 50;
 
-	/** The Constant SALUD_TOPE2. */
+	/** Constante SALUD_TOPE2. */
 	private static final int SALUD_TOPE2 = 130;
 
-	/** The Constant SALUD_TOPE1. */
+	/** Constante SALUD_TOPE1. */
 	private static final int SALUD_TOPE1 = 105;
 
 	/**

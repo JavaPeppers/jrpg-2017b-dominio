@@ -6,11 +6,11 @@ import org.junit.Test;
 import dominio.NonPlayableCharacter;
 
 /**
- * The Class TestNPC.
+ * Clase para Testear a los NPC.
  */
 public class TestNPC {
 
-	/** The Constant EXP_TEST. */
+	/** Constante EXP_TEST. */
 	private static final int EXP_TEST = 30;
 
 	/**

@@ -8,11 +8,11 @@ import dominio.Humano;
 
 
 /**
- * The Class TestAtaqueCritico se utiliza para testear el ataque critico.
+ * Clase TestAtaqueCritico se utiliza para testear el ataque critico.
  */
 public class TestAtaqueCritico {
 
-	/** The Constant GOLPE_CRIT. */
+	/** Constante GOLPE_CRIT. */
 	private static final double GOLPE_CRIT = 1.5;
 
 	/**

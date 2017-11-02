@@ -9,11 +9,11 @@ import dominio.Personaje;
 
 
 /**
- * The Class TestCastaNuevo se usa para testear los castas nuevos.
+ * Clase TestCastaNuevo se usa para testear los castas nuevos.
  */
 public class TestCastaNuevo {
 
-	/** The Constant VALOR_CRITICO. */
+	/** Constante VALOR_CRITICO. */
 	private static final int VALOR_CRITICO = 8;
 
 	/**

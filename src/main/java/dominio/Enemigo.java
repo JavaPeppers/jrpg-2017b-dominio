@@ -1,7 +1,7 @@
 package dominio;
 
 /**
- * The Class Enemigo se utiliza para
+ * La clase Enemigo se utiliza para
  *  crear los enemigos (NPC's), con
  *  los cuales un Personaje podrá
  *  pelear contra ellos y ganar experiencia
@@ -9,16 +9,16 @@ package dominio;
  */
 public class Enemigo extends MadreDeTodo implements Peleable {
 
-	/** The Constant EXPERIENCIA_OTORGADA. */
+	/**  Constante EXPERIENCIA_OTORGADA. */
 	private static final int EXPERIENCIA_OTORGADA = 40;
 
-	/** The Constant NIVEL_ENEMIGO. */
+	/**  Constante NIVEL_ENEMIGO. */
 	private static final int NIVEL_ENEMIGO = 1;
 
-	/** The Constant DEFENSA_ENEMIGO. */
+	/**  Constante DEFENSA_ENEMIGO. */
 	private static final int DEFENSA_ENEMIGO = 0;
 
-	/** The Constant FUERZA_ENEMIGO. */
+	/**  Constante FUERZA_ENEMIGO. */
 	private static final int FUERZA_ENEMIGO = 25;
 
 	/**
