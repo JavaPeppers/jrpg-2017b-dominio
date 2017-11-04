@@ -16,10 +16,10 @@ public class Item implements Serializable {
 	/** id del item. */
 	private final int idItem;
 
-	/** foto del item */
+	/** foto del item. */
 	private final String foto;
 
-	/**  nombre del item */
+	/**  nombre del item. */
 	private final String nombre;
 
 	/**  ubicacion del item. */
