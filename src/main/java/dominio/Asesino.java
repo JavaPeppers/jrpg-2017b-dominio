@@ -11,6 +11,7 @@ package dominio;
  * variable nombreCasta
  */
 
+@SuppressWarnings("serial")
 public class Asesino extends Casta {
 
 	/** Constante CEROPUNTOCINCO. */
@@ -88,8 +89,8 @@ public Asesino(final double probCrit, final double evasion,
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			return (atacado.serAtacado((int) (caster.getAtaque()
-				* caster.getCasta().getDañoCritico()))
-				> 0);
+					* caster.getCasta().getDañoCritico()))
+					> 0);
 		}
 		return false;
 	}

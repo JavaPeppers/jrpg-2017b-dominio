@@ -101,7 +101,7 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	@Override
 	public int atacar(final Peleable personaje) {
 
-		if (!personaje.estaVivo()) {
+		if (!personaje.estaVivo() || ((Personaje) personaje).isModoDios()) {
 			return 0;
 		}
 		return personaje.serAtacado(this.getFuerza());

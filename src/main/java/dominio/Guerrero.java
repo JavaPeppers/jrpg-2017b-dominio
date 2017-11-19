@@ -8,6 +8,7 @@ package dominio;
 	 * pasándole los argumentos recibidos
 	 * por el constructor hijo
 	 */
+@SuppressWarnings("serial")
 public class Guerrero extends Casta {
 	/**
 	 * Energia minima requerida para realizar una habilidad.
@@ -144,7 +145,6 @@ public class Guerrero extends Casta {
 					return true;
 				}
 			}
-
 		}
 		return false;
 	}

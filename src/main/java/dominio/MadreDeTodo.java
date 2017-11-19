@@ -12,7 +12,7 @@ public abstract class MadreDeTodo {
 	/**
 	 * Fuerza que recibira el personaje o npc.
 	 */
-	private int fuerza;
+	protected int fuerza;
 	/**
 	 * Defensa que recibira el personaje o npc.
 	 */
@@ -20,15 +20,15 @@ public abstract class MadreDeTodo {
 	/**
 	 * Nivel que recibira el personaje o npc.
 	 */
-	private int nivel;
+	protected int nivel;
 	/**
 	 * Nombre que recibira el personaje o npc.
 	 */
-	private String nombre;
+	protected String nombre;
 	/**
 	 * Objeto para obtener valores aleatorios.
 	 */
-	private RandomGenerator random;
+	protected RandomGenerator random;
 
 	/** Array list donde se almacenaran los items. */
 	protected ArrayList<Item> items = new ArrayList<Item>();

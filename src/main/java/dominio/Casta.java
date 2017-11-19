@@ -9,6 +9,7 @@ import java.io.Serializable;
 	 * pondrá los atributos con sus
 	 * respectivos valores por defecto.
 	 */
+@SuppressWarnings("serial")
 public abstract class Casta implements Serializable {
 	/**
 	 * Numero que indica probabilidad.

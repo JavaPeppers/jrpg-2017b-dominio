@@ -10,8 +10,12 @@ import javax.swing.DefaultListModel;
  * La cual sirve de base para la creacion de las distintas Razas.
  */
 
+@SuppressWarnings("serial")
 public abstract class Personaje extends
      MadreDeTodo implements Peleable, Serializable {
+	
+	private static final int DADDY = 2;
+	
 	/**
 	 * Salud del personaje.
 	 */
@@ -135,6 +139,7 @@ public abstract class Personaje extends
 	/**
 	 * Nombre de la Raza del Personaje.
 	 */
+	@SuppressWarnings("unused")
 	private String nombreRaza;
 	/**
 	 * Salud tope del Personaje.
@@ -183,15 +188,39 @@ public abstract class Personaje extends
 	/**
 	 * Habilidades obtenidas segun la raza del personaje.
 	 */
+	@SuppressWarnings("unused")
 	private String[] habilidadesRaza = new String[CANTHABILIDADESRAZA];
 	/**
 	 * Habilidades obtenidas segun la casta del personaje.
 	 */
+	@SuppressWarnings("unused")
 	private String[] habilidadesCasta = new String[CANTHABILIDADESCASTA];
 	/**
 	 * Nombre de la casta del personaje.
 	 */
+	@SuppressWarnings("unused")
 	private String nombreCasta;
+	
+	/**
+	 * InteligenciaSkill
+	 */
+	@SuppressWarnings("unused")
+	private int inteligenciaSkill;
+    
+	/**
+	 * Modo dios
+	 */
+    private static boolean modoDios;
+    
+    /**
+     * Modo invisible
+     */
+    private boolean modoInvisible;
+    
+    /**
+     * Modo Atravesar Paredes
+     */
+    private boolean modoAtravesarParedes;
 
 
 	/**
@@ -199,7 +228,6 @@ public abstract class Personaje extends
 	 * Segun la casta del mismo.
 	 * @return String[] de habilidades casta.
 	 */
-
 	public final String[] getHabilidadesCasta() {
 		return casta.getHabilidadesCasta();
 	}
@@ -440,8 +468,7 @@ public abstract class Personaje extends
 		if (salud == 0) {
 			return 0;
 		}
-		if (atacado.getSalud() > 0) {
-
+		if(atacado.getSalud() > 0){
 			if (this.getRandom().nextDouble()
 					<= this.casta.
 					getProbabilidadGolpeCritico()
@@ -1010,6 +1037,37 @@ public abstract class Personaje extends
 		}
 		this.items = aux;
 	}
+	
+	public boolean isModoDios() {
+		return modoDios;
+	}
 
+	public void setTinyDaddy() {
+		this.fuerza /= DADDY;
+	}
+
+	public void setBigDaddy() {
+		if(this.fuerza == 0)
+			this.fuerza = 1;
+		else
+			this.fuerza *= DADDY;
+	}
+	
+	public void setAtravesarParedes() {
+		this.modoAtravesarParedes = !(this.modoAtravesarParedes);
+	}
+	
+	public static void setModoDios() {
+		modoDios = !modoDios;
+	}
+	
+	public void setModoInvisible() {
+		this.modoInvisible = !(this.modoInvisible);
+	}
+
+	
+	public boolean modoDiosSinEfecto(final Peleable atacado, final Peleable personaje) {
+		return (!((Personaje) atacado).isModoDios() || (((Personaje) personaje).isModoDios() && ((Personaje) atacado).isModoDios()));
+	}
 }
 

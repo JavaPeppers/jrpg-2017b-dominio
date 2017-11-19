@@ -8,6 +8,7 @@ package dominio;
  * pasándole los argumentos recibidos
  * por el constructor hijo.
  * */
+@SuppressWarnings("serial")
 public class Hechicero extends Casta {
 	/**
 	 * Energia minima para realizar una habilidad.
@@ -149,7 +150,6 @@ public class Hechicero extends Casta {
 				caster.serCurado(saludRobada);
 				return true;
 			}
-
 		}
 		return false;
 	}
@@ -194,7 +194,5 @@ public class Hechicero extends Casta {
 		return new String[] {"Bola de Fuego",
 				"Curar Aliado", "Robar Energia y Salud"};
 	}
-
-
 
 }

@@ -6,6 +6,7 @@ package dominio;
  * declarados en la clase Personaje,
  * como por ejemplo habilidadesRaza[]
  */
+@SuppressWarnings("serial")
 public class Humano extends Personaje {
 	/**
 	 * Energia minima que se necesita para realizar una habilidad.
