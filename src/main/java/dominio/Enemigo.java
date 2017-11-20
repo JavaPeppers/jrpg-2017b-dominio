@@ -32,14 +32,14 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	/**
 	 * Constructor de Enemigo.
 	 *
-	 * @param fuerza
-	 * @param defensa
+	 * @param fuerza fuerza del enemigo
+	 * @param nivel nivel del enemigo
 	 * @param nombre nombre del enemigo
-	 * @param salud
+	 * @param saludParam salud del enemigo
 	 */
-	public Enemigo(final String nombre, final int fuerza, final int nivel, final int salud) {
+	public Enemigo(final String nombre, final int fuerza, final int nivel, final int saludParam) {
 		super(fuerza, DEFENSA_ENEMIGO, nivel, nombre);
-		this.salud = salud;
+		this.salud = saludParam;
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	@Override
 	public int atacar(final Peleable personaje) {
 
-		if(((personaje instanceof Personaje)) &&  ((Personaje) personaje).isModoDios()){
+		if (((personaje instanceof Personaje)) &&  ((Personaje) personaje).isModoDios()) {
 			return 0;
 		}
 		if (!personaje.estaVivo()) {
@@ -151,11 +151,13 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	public int getSaludTope() {
 		return saludTope;
 	}
-	
+
 	/**
-	 * 
+	 * Sets the salud tope.
+	 *
+	 * @param saludTopeParam the new salud tope
 	 */
-	public void setSaludTope(int saludTopeParam) {
+	public void setSaludTope(final int saludTopeParam) {
 		this.saludTope = saludTopeParam;
 	}
 }

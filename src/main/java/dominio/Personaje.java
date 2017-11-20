@@ -13,9 +13,12 @@ import javax.swing.DefaultListModel;
 @SuppressWarnings("serial")
 public abstract class Personaje extends
      MadreDeTodo implements Peleable, Serializable {
-	
+
+	/**
+	 * The Constant DADDY.
+	 */
 	private static final int DADDY = 2;
-	
+
 	/**
 	 * Salud del personaje.
 	 */
@@ -200,25 +203,25 @@ public abstract class Personaje extends
 	 */
 	@SuppressWarnings("unused")
 	private String nombreCasta;
-	
+
 	/**
-	 * InteligenciaSkill
+	 * InteligenciaSkill.
 	 */
 	@SuppressWarnings("unused")
 	private int inteligenciaSkill;
-    
+
 	/**
-	 * Modo dios
+	 * Modo dios.
 	 */
     private boolean modoDios;
-    
+
     /**
-     * Modo invisible
+     * Modo invisible.
      */
     private boolean modoInvisible;
-    
+
     /**
-     * Modo Atravesar Paredes
+     * Modo Atravesar Paredes.
      */
     private boolean modoAtravesarParedes;
 
@@ -468,7 +471,7 @@ public abstract class Personaje extends
 		if (salud == 0) {
 			return 0;
 		}
-		if(atacado.getSalud() > 0){
+		if (atacado.getSalud() > 0) {
 			if (this.getRandom().nextDouble()
 					<= this.casta.
 					getProbabilidadGolpeCritico()
@@ -1037,40 +1040,66 @@ public abstract class Personaje extends
 		}
 		this.items = aux;
 	}
-	
+
+	/**
+	 * Checks if is modo dios.
+	 *
+	 * @return true, if is modo dios
+	 */
 	public boolean isModoDios() {
 		return modoDios;
 	}
 
+	/**
+	 * Sets the tiny daddy.
+	 */
 	public void setTinyDaddy() {
 		this.fuerza /= DADDY;
 	}
 
+	/**
+	 * Sets the big daddy.
+	 */
 	public void setBigDaddy() {
-		if(this.fuerza == 0)
+		if (this.fuerza == 0) {
 			this.fuerza = 1;
-		else
+		} else {
 			this.fuerza *= DADDY;
+		}
 	}
-	
+
+	/**
+	 * Sets the atravesar paredes.
+	 */
 	public void setAtravesarParedes() {
 		this.modoAtravesarParedes = !(this.modoAtravesarParedes);
 	}
-	
+
+	/**
+	 * Sets the modo dios.
+	 */
 	public void setModoDios() {
 		this.modoDios = !this.modoDios;
 	}
-	
+
+	/**
+	 * Sets the modo invisible.
+	 */
 	public void setModoInvisible() {
 		this.modoInvisible = !(this.modoInvisible);
 	}
 
-	
+
 //	public boolean modoDiosSinEfecto(final Peleable atacado, final Peleable personaje) {
 //		return (!((Personaje) atacado).isModoDios() || (((Personaje) personaje).isModoDios() && ((Personaje) atacado).isModoDios()));
 //	}
-	
-	public boolean isModoInvisible() {
+
+	/**
+ * Checks if is modo invisible.
+ *
+ * @return true, if is modo invisible
+ */
+public boolean isModoInvisible() {
 		return this.modoInvisible;
 	}
 }

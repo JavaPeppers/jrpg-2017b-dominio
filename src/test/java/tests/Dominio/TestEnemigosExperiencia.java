@@ -11,7 +11,7 @@ import dominio.Personaje;
 
 
 /**
- * Clase para Testear Experiencia obtenida luego 
+ * Clase para Testear Experiencia obtenida luego.
  * de batallar contra Enemigos.
  */
 public class TestEnemigosExperiencia {
