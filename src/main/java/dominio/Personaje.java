@@ -1066,8 +1066,12 @@ public abstract class Personaje extends
 	}
 
 	
-	public boolean modoDiosSinEfecto(final Peleable atacado, final Peleable personaje) {
-		return (!((Personaje) atacado).isModoDios() || (((Personaje) personaje).isModoDios() && ((Personaje) atacado).isModoDios()));
+//	public boolean modoDiosSinEfecto(final Peleable atacado, final Peleable personaje) {
+//		return (!((Personaje) atacado).isModoDios() || (((Personaje) personaje).isModoDios() && ((Personaje) atacado).isModoDios()));
+//	}
+	
+	public boolean isModoInvisible() {
+		return this.modoInvisible;
 	}
 }
 
