@@ -12,14 +12,8 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	/**  Constante EXPERIENCIA_OTORGADA. */
 	private static final int EXPERIENCIA_OTORGADA = 40;
 
-	/**  Constante NIVEL_ENEMIGO. */
-	private static final int NIVEL_ENEMIGO = 1;
-
 	/**  Constante DEFENSA_ENEMIGO. */
 	private static final int DEFENSA_ENEMIGO = 0;
-
-	/**  Constante FUERZA_ENEMIGO. */
-	private static final int FUERZA_ENEMIGO = 25;
 
 	/**
 	 * Rango en el cual el enemigo me va a atacar.
@@ -29,7 +23,7 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	/**
 	 * Salud tope del enemigo.
 	 */
-	private static final int saludTope = 60;
+	private int saludTope = 60;
 	/**
 	 * Salud actual del enemigo.
 	 */
@@ -43,9 +37,9 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	 * @param nombre nombre del enemigo
 	 * @param salud
 	 */
-	public Enemigo(final String nombre) {
-		super(FUERZA_ENEMIGO, DEFENSA_ENEMIGO, NIVEL_ENEMIGO, nombre);
-		this.salud = saludTope;
+	public Enemigo(final String nombre, final int fuerza, final int nivel, final int salud) {
+		super(fuerza, DEFENSA_ENEMIGO, nivel, nombre);
+		this.salud = salud;
 	}
 
 	/**
@@ -101,7 +95,10 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	@Override
 	public int atacar(final Peleable personaje) {
 
-		if (!personaje.estaVivo() || ((Personaje) personaje).isModoDios()) {
+		if(((personaje instanceof Personaje)) &&  ((Personaje) personaje).isModoDios()){
+			return 0;
+		}
+		if (!personaje.estaVivo()) {
 			return 0;
 		}
 		return personaje.serAtacado(this.getFuerza());
@@ -153,5 +150,12 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	 */
 	public int getSaludTope() {
 		return saludTope;
+	}
+	
+	/**
+	 * 
+	 */
+	public void setSaludTope(int saludTopeParam) {
+		this.saludTope = saludTopeParam;
 	}
 }

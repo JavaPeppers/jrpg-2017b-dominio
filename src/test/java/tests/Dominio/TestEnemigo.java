@@ -37,7 +37,7 @@ public class TestEnemigo {
 	 */
 	@Test
 	public void crearEnemigo() {
-		Enemigo e = new Enemigo("Enemigo");
+		Enemigo e = new Enemigo("Enemigo", FUERZA, 1, SALUD);
 		Assert.assertEquals(SALUD, e.getSalud());
 		Assert.assertEquals(FUERZA, e.getFuerza());
 		Assert.assertEquals(0, e.getDefensa());
@@ -50,8 +50,8 @@ public class TestEnemigo {
 	 */
 	@Test
 	public void testAtacarEnemigo() {
-		Enemigo e = new Enemigo("Enemigo");
-		Enemigo e1 = new Enemigo("Enemigo2");
+		Enemigo e = new Enemigo("Enemigo", FUERZA, 1, SALUD);
+		Enemigo e1 = new Enemigo("Enemigo", FUERZA, 1, SALUD);
 		e.atacar(e1);
 		Assert.assertEquals(SALUD2, e1.getSalud());
 	}
@@ -61,8 +61,8 @@ public class TestEnemigo {
 	 */
 	@Test
 	public void testMatarEnemigo() {
-		Enemigo e = new Enemigo("Enemigo");
-		Enemigo e1 = new Enemigo("Enemigo2");
+		Enemigo e = new Enemigo("Enemigo", FUERZA, 1, SALUD);
+		Enemigo e1 = new Enemigo("Enemigo", FUERZA, 1, SALUD);
 		e.atacar(e1);
 		e.atacar(e1);
 		e.atacar(e1);
@@ -74,7 +74,7 @@ public class TestEnemigo {
 	 */
 	@Test
 	public void testSaludTope() {
-		Enemigo e = new Enemigo("Enemigo");
+		Enemigo e = new Enemigo("Enemigo", FUERZA, 1, SALUD);
 		Assert.assertEquals(SALUD_TOPE, e.getSaludTope());
 	}
 
@@ -83,7 +83,7 @@ public class TestEnemigo {
 	 */
 	@Test
 	public void testSetAtaque() {
-		Enemigo e = new Enemigo("Enemigo");
+		Enemigo e = new Enemigo("Enemigo", FUERZA, 1, SALUD);
 		e.setAtaque(INCRE_ATAQUE);
 		Assert.assertEquals(VALOR_ATAQUE, e.getAtaque());
 	}
@@ -93,8 +93,8 @@ public class TestEnemigo {
 	 */
 	@Test
 	public void testEnemigoMuertoNoAtaca() {
-		Enemigo e = new Enemigo("Enemigo");
-		Enemigo e1 = new Enemigo("Enemigo");
+		Enemigo e = new Enemigo("Enemigo", FUERZA, 1, SALUD);
+		Enemigo e1 = new Enemigo("Enemigo", FUERZA, 1, SALUD);
 		e.atacar(e1);
 		e.atacar(e1);
 		e.atacar(e1);
@@ -107,7 +107,7 @@ public class TestEnemigo {
 	 */
 	@Test
 	public void testOtorgarExperiencia() {
-		Enemigo e = new Enemigo("Enemigo");
+		Enemigo e = new Enemigo("Enemigo", FUERZA, 1, SALUD);
 		Assert.assertEquals(EXP, e.otorgarExp());
 	}
 }

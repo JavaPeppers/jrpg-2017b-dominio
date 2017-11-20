@@ -210,7 +210,7 @@ public abstract class Personaje extends
 	/**
 	 * Modo dios
 	 */
-    private static boolean modoDios;
+    private boolean modoDios;
     
     /**
      * Modo invisible
@@ -1057,8 +1057,8 @@ public abstract class Personaje extends
 		this.modoAtravesarParedes = !(this.modoAtravesarParedes);
 	}
 	
-	public static void setModoDios() {
-		modoDios = !modoDios;
+	public void setModoDios() {
+		this.modoDios = !this.modoDios;
 	}
 	
 	public void setModoInvisible() {
