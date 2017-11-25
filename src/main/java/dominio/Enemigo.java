@@ -83,12 +83,6 @@ public class Enemigo extends MadreDeTodo implements Peleable {
 	}
 
 	/**
-	 * Metodo sin implementar
-	 */
-	// @Override
-	// public void despuesDeTurno() { }
-
-	/**
 	 * Método implementado en la interfaz Peleable Verifica que el personaje
 	 * este vivo y si lo esta lo ataca.
 	 */

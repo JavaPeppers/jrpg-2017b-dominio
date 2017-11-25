@@ -495,13 +495,8 @@ public abstract class Personaje extends
 	public final int golpeCritico() {
 		return (int) (this.ataque * this.getCasta().getDañoCritico());
 	}
-	/**
-	 * Metodo no implementado.
-	 */
-//	@Override
-//	public void despuesDeTurno() {
-//
-//	}
+
+
 	/** Metodo que retorna un boolean si el personaje puede atacar o no.
 	 * Devuelve true si la energia es mayor a la ENERGIAMINIMA,
 	 * puede atacar, y falso si la primera es menor a la ENERGIAMINIMA.
@@ -1089,18 +1084,13 @@ public abstract class Personaje extends
 		this.modoInvisible = !(this.modoInvisible);
 	}
 
-
-//	public boolean modoDiosSinEfecto(final Peleable atacado, final Peleable personaje) {
-//		return (!((Personaje) atacado).isModoDios() || (((Personaje) personaje).isModoDios() && ((Personaje) atacado).isModoDios()));
-//	}
-
 	/**
- * Checks if is modo invisible.
- *
- * @return true, if is modo invisible
- */
-public boolean isModoInvisible() {
-		return this.modoInvisible;
+	 * Checks if is modo invisible.
+	 *
+	 * @return true, if is modo invisible
+	 */
+	public boolean isModoInvisible() {
+			return this.modoInvisible;
+		}
 	}
-}
 
